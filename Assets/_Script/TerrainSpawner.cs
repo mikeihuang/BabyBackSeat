@@ -45,7 +45,7 @@ public class TerrainSpawner : MonoBehaviour {
 				if (Random.value > 0.5f)
 					xoffset *= -1;
 				spawned.transform.position += new Vector3(xoffset, 0, 0);
-				spawned.transform.RotateAround (Vector3.zero, Vector3.up, 90 * Mathf.Round (Random.Range (0, 3)));
+				spawned.transform.RotateAround (spawned.transform.position, Vector3.up, 90 * Mathf.Round (Random.Range (0, 3)));
 				TerrainPool.Add (spawned);
 
 				spawned.transform.parent = this.transform;
