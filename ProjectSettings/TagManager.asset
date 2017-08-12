@@ -4,14 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< HEAD
   - Car
-=======
-  - FxTemporaire
-  - projectile
-  - TeleportIgnore
-  - controller
->>>>>>> 8b35ba9e49320ae9bea962eba4310ce2d1797437
   layers:
   - Default
   - TransparentFX
