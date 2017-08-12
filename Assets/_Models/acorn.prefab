@@ -23,7 +23,9 @@ GameObject:
   - component: {fileID: 23856189567900452}
   - component: {fileID: 65242163406742034}
   - component: {fileID: 54384491949865034}
-  - component: {fileID: 114645013623798406}
+  - component: {fileID: 114342014246222310}
+  - component: {fileID: 114144780372667686}
+  - component: {fileID: 114573884073853324}
   m_Layer: 0
   m_Name: acorn
   m_TagString: Untagged
@@ -110,7 +112,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.26208755, y: 0.38635826, z: 0.26208755}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114645013623798406
+--- !u!114 &114144780372667686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1794504184310750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8afa0b205791c9f4496bf2814aeac078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 0
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
+  destroyImmediatelyOnThrow: 1
+  breakForce: 1500
+--- !u!114 &114342014246222310
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1794504184310750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114573884073853324
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -122,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableWhenIdle: 1
-  touchHighlightColor: {r: 0.99264705, g: 0.9692906, b: 0.14597753, a: 0}
+  touchHighlightColor: {r: 1, g: 1, b: 0, a: 0}
   allowedTouchControllers: 0
   ignoredColliders: []
   isGrabbable: 1
