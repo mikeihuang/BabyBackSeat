@@ -6909,10 +6909,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1454881145}
+  - component: {fileID: 1454881149}
   - component: {fileID: 1454881148}
   - component: {fileID: 1454881147}
   - component: {fileID: 1454881146}
-  - component: {fileID: 1454881149}
   m_Layer: 0
   m_Name: RightController
   m_TagString: Untagged
@@ -8711,6 +8711,7 @@ GameObject:
   - component: {fileID: 1945958473}
   - component: {fileID: 1945958472}
   - component: {fileID: 1945958478}
+  - component: {fileID: 1945958475}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -8782,6 +8783,37 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1945958470}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1945958475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1945958470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb15a32f22072b04e8b0b41084183624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableWhenIdle: 1
+  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  allowedTouchControllers: 0
+  ignoredColliders: []
+  isGrabbable: 0
+  holdButtonToGrab: 1
+  stayGrabbedOnTeleport: 1
+  validDrop: 1
+  grabOverrideButton: 0
+  allowedGrabControllers: 0
+  grabAttachMechanicScript: {fileID: 0}
+  secondaryGrabActionScript: {fileID: 0}
+  isUsable: 0
+  holdButtonToUse: 1
+  useOnlyIfGrabbed: 0
+  pointerActivatesUseAction: 0
+  useOverrideButton: 0
+  allowedUseControllers: 0
+  usingState: 0
+  SpawnedObject: {fileID: 0}
 --- !u!54 &1945958478
 Rigidbody:
   m_ObjectHideFlags: 0
