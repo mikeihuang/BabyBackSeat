@@ -131,6 +131,7 @@ ModelImporter:
     7400000: Idle
     7400002: Turn_Around
     7400004: Default Take
+    7400006: Drop_Carrot
     9500000: //RootNode
     13700000: Baby
     13700002: Car
