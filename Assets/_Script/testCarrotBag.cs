@@ -45,6 +45,6 @@ public class testCarrotBag : VRTK_InteractableObject {
 
     private bool CanGrabObject(VRTK_InteractGrab grabbingObject)
     {
-        return (grabbingObject != null && grabbingObject.GetGrabbedObject() == null);// && grabbingObject.gameObject.GetComponent<VRTK_ControllerEvents>().grabPressed);
+        return (grabbingObject != null && grabbingObject.GetGrabbedObject() == null && grabbingObject.gameObject.GetComponent<VRTK_ControllerEvents>().grabPressed);
     }
 }
