@@ -7,17 +7,22 @@ public class Exploder : MonoBehaviour {
 	public ParticleSystem ExplosionParticleSystem;
 	public List<MeshRenderer> myRenderers;
 
+	public AudioSource audioSource;
+
 	// Use this for initialization
 	void Start () {
 		myRenderers.AddRange(GetComponentsInChildren<MeshRenderer> ());
 		myRenderers.Add (GetComponent<MeshRenderer> ());
 		ExplosionParticleSystem = GetComponentInChildren<ParticleSystem> ();
+		audioSource = GetComponent<AudioSource> ();
 	}
 
 	public void Reset() {
 
 		foreach (MeshRenderer r in myRenderers) {
-			r.enabled = true;
+			if (r) {
+				r.enabled = true;
+			}
 		}
 
 		if (ExplosionParticleSystem) {
@@ -32,11 +37,17 @@ public class Exploder : MonoBehaviour {
 		Debug.Log (this.name + " collided with " + collision.gameObject.name);
 
 		foreach (MeshRenderer r in myRenderers) {
-			r.enabled = false;
+			if (r) {
+				r.enabled = false;
+			}
 		}
 
 		if (ExplosionParticleSystem) {
 			ExplosionParticleSystem.Play ();
+		}
+
+		if (audioSource) {
+			audioSource.Play ();
 		}
 	}
 }
