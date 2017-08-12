@@ -10,13 +10,18 @@ public class Horsie : MonoBehaviour {
 	public Vector3 RotationScale = new Vector3 ();
 	public Vector3 RotationSpeed = new Vector3 ();
 
+    private Animator anim;
+
 	private Vector3 RootPosition;
 	private Quaternion RootRotation;
 
 	// Use this for initialization
 	void Start () {
+        anim = GetComponent<Animator>();
+
 		RootPosition = this.transform.position;
 		RootRotation = this.transform.rotation;
+        Show();
 	}
 	
 	// Update is called once per frame
@@ -33,4 +38,14 @@ public class Horsie : MonoBehaviour {
 			RotationScale.z * Mathf.Sin (RotationSpeed.z * Time.time)
 		);
 	}
+
+    public void Show()
+    {
+        anim.SetBool("Show", true);
+    }
+
+    public void Hide()
+    {
+        anim.SetBool("Show", false);
+    }
 }
