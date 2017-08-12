@@ -36,6 +36,7 @@ public class testCarrotBag : VRTK_InteractableObject {
             {
                 Debug.Log("grabbed");
                 GameObject carrot = Instantiate(SpawnedObject);
+                carrot.transform.position = grabObject.transform.position;
                 grabObject.GetComponent<VRTK_InteractTouch>().ForceTouch(carrot);
                 grabObject.AttemptGrab();
             }
@@ -44,6 +45,6 @@ public class testCarrotBag : VRTK_InteractableObject {
 
     private bool CanGrabObject(VRTK_InteractGrab grabbingObject)
     {
-        return (grabbingObject != null); // && grabbingObject.GetGrabbedObject() == null && grabbingObject.gameObject.GetComponent<VRTK_ControllerEvents>().grabPressed);
+        return (grabbingObject != null && grabbingObject.GetGrabbedObject() == null);// && grabbingObject.gameObject.GetComponent<VRTK_ControllerEvents>().grabPressed);
     }
 }
