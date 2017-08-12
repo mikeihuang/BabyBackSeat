@@ -5,6 +5,8 @@ using VRTK;
 
 public class testCarrotBag : VRTK_InteractableObject {
 
+    public GameObject SpawnedObject;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -14,4 +16,20 @@ public class testCarrotBag : VRTK_InteractableObject {
 	void Update () {
 		
 	}
+
+    private void OnTriggerStay(Collider other)
+    {
+        VRTK_InteractGrab grabObject = other.GetComponent<VRTK_InteractGrab>() ? other.GetComponent<VRTK_InteractGrab>() : other.GetComponentInParent<VRTK_InteractGrab>();
+        if(CanGrabObject(grabObject))
+        {
+            GameObject carrot = Instantiate(SpawnedObject);
+            grabObject.GetComponent<VRTK_InteractTouch>().ForceTouch(carrot);
+            grabObject.AttemptGrab();
+        }
+    }
+
+    private bool CanGrabObject(VRTK_InteractGrab grabbedObject)
+    {
+        return (grabbedObject && grabbedObject.GetGrabbedObject() == null && grabbedObject.gameObject.GetComponent<VRTK_ControllerEvents>().grabPressed);
+    }
 }
