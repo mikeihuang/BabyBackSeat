@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 136532644290393760}
   - component: {fileID: 114536177662056012}
   - component: {fileID: 82378416928422722}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree_01a_Autumn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 4401912291549866}
   - component: {fileID: 198052997550117148}
   - component: {fileID: 199761178506589906}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FX_Fireworks
   m_TagString: Untagged
   m_Icon: {fileID: 0}

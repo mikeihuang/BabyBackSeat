@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4000010586458700}
   - component: {fileID: 33000013035310626}
   - component: {fileID: 23000010691642492}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Door_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4000011404139676}
   - component: {fileID: 33000010248973986}
   - component: {fileID: 23000014079822324}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: House_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4000010355659496}
   - component: {fileID: 33000011184624344}
   - component: {fileID: 23000011924852902}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Window_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4000012348638276}
   - component: {fileID: 33000012897551288}
   - component: {fileID: 23000010709468922}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 54021663442973972}
   - component: {fileID: 114485090849925084}
   - component: {fileID: 82520265914972034}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: house_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 4000010556006292}
   - component: {fileID: 33000012573322558}
   - component: {fileID: 23000010026534028}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Roof_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 4000010531585124}
   - component: {fileID: 33000013165304538}
   - component: {fileID: 23000013021844162}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Platform_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 4000012713016506}
   - component: {fileID: 33000011681335028}
   - component: {fileID: 23000013936847370}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Window_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4000011564252906}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: polySurface659
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 4000012701085372}
   - component: {fileID: 33000011924772782}
   - component: {fileID: 23000014031423296}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Window_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 4604469478810090}
   - component: {fileID: 198676565261125476}
   - component: {fileID: 199836389463620572}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FX_Fireworks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
