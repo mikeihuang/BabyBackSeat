@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: CarMat
+  m_Name: Tree Autumn 2
   m_Shader: {fileID: 4800000, guid: 81ae609a37b59f043ac4256abae11b2e, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -39,7 +39,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 568cf47cda587374895e655354434e27, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9f2f3e448a6cbae478caf13c5de38807, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -64,14 +64,14 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0.2
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RimMax: 0.8
-    - _RimMin: 0.1
+    - _RimMax: 1
+    - _RimMin: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -81,5 +81,5 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HColor: {r: 1, g: 1, b: 1, a: 1}
-    - _RimColor: {r: 0.39215687, g: 0.19215687, b: 0.09019608, a: 0.78431374}
-    - _SColor: {r: 0.019607844, g: 0.019607844, b: 0.019607844, a: 1}
+    - _RimColor: {r: 0.5647059, g: 0, b: 0.2920893, a: 0.627451}
+    - _SColor: {r: 0.29999998, g: 0.29999998, b: 0.29999998, a: 1}
