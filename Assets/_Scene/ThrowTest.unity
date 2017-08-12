@@ -8813,7 +8813,8 @@ MonoBehaviour:
   useOverrideButton: 0
   allowedUseControllers: 0
   usingState: 0
-  SpawnedObject: {fileID: 0}
+  SpawnedObject: {fileID: 1561502005227104, guid: dee858c608d3c3b4d80dd231697aedb2,
+    type: 2}
 --- !u!54 &1945958478
 Rigidbody:
   m_ObjectHideFlags: 0
