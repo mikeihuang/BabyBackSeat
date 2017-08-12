@@ -13,6 +13,8 @@ public class Horsie : MonoBehaviour {
 	private Vector3 RootPosition;
 	private Quaternion RootRotation;
 
+	public AudioSource EatingSound;
+
 	// Use this for initialization
 	void Start () {
 		RootPosition = this.transform.position;
@@ -32,5 +34,19 @@ public class Horsie : MonoBehaviour {
 			RotationScale.y * Mathf.Sin (RotationSpeed.y * Time.time),
 			RotationScale.z * Mathf.Sin (RotationSpeed.z * Time.time)
 		);
+	}
+
+	public void Eat(GameObject food) {
+		Debug.Log ("Horsie ate the " + food.name);
+		food.SetActive (false);
+		if (EatingSound) {
+			EatingSound.Play ();
+		}
+	}
+
+	void OnCollisionEnter(Collision collision)
+	{
+		Debug.Log ("Horsie's mouth collided with " + collision.gameObject.name);
+
 	}
 }
