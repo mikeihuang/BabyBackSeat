@@ -22,7 +22,15 @@ public class testCarrotBag : VRTK_InteractableObject {
     {
         Debug.Log("collieded");
         VRTK_InteractGrab grabObject = other.GetComponent<VRTK_InteractGrab>() ? other.GetComponent<VRTK_InteractGrab>() : other.GetComponentInParent<VRTK_InteractGrab>();
-        if(CanGrabObject(grabObject))
+        if(grabObject==null)
+        {
+            Debug.Log("grabObject==null");
+        }
+        if(grabObject.GetGrabbedObject()!=null)
+        {
+            Debug.Log("grabbedObject!=null");
+        }
+        if (CanGrabObject(grabObject))
         {
             Debug.Log("grabbed");
             GameObject carrot = Instantiate(SpawnedObject);
@@ -31,8 +39,8 @@ public class testCarrotBag : VRTK_InteractableObject {
         }
     }
 
-    private bool CanGrabObject(VRTK_InteractGrab grabbedObject)
+    private bool CanGrabObject(VRTK_InteractGrab grabbingObject)
     {
-        return (grabbedObject && grabbedObject.GetGrabbedObject() == null); // && grabbedObject.gameObject.GetComponent<VRTK_ControllerEvents>().grabPressed);
+        return (grabbingObject!=null && grabbingObject.GetGrabbedObject() == null); // && grabbedObject.gameObject.GetComponent<VRTK_ControllerEvents>().grabPressed);
     }
 }
