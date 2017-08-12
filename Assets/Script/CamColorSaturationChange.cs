@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.PostProcessing;
 
 [RequireComponent(typeof(PostProcessingBehaviour))]
-public class ColorSaturationChange : MonoBehaviour {
+public class CamColorSaturationChange : MonoBehaviour {
 
 	[Header("Post Processing Profile")]
 	PostProcessingBehaviour filters;
@@ -16,7 +16,7 @@ public class ColorSaturationChange : MonoBehaviour {
 	[Header("Color Change Speed")]
 	float speed = 0.5F;
 
-	void Awake () {
+	void Start () {
 		filters = GetComponent<PostProcessingBehaviour> ();
 		profile = filters.profile;
 	}
