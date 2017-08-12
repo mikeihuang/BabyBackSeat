@@ -30,6 +30,10 @@ public class TerrainSpawner : MonoBehaviour {
 			t.transform.position += speed * Time.deltaTime;
 			if (t.transform.position.z < -750) {
 				t.transform.position += Vector3.forward * 1000;
+				Exploder e = t.GetComponent<Exploder> ();
+				if (e) {
+					e.Reset ();
+				}
 			}
 		}
 	}
