@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114672531559352054}
   - component: {fileID: 114986379817900978}
   - component: {fileID: 114914211271606722}
+  - component: {fileID: 114197081554732766}
   m_Layer: 0
   m_Name: grape
   m_TagString: Untagged
@@ -39,8 +40,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1084104074745646}
-  m_LocalRotation: {x: 1.7112914e-15, y: 1, z: -0.000000021855694, w: 0.0000000754979}
-  m_LocalPosition: {x: -1.7, y: 5.64, z: 1.54}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1, y: 0, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -92,7 +93,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1084104074745646}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -112,6 +113,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.31348443, y: 0.44650897, z: 0.280689}
   m_Center: {x: 0.00000022351742, y: -0.000000059604645, z: 0}
+--- !u!114 &114197081554732766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1084104074745646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163d062a274e87146ac7baf4fe5102af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114672531559352054
 MonoBehaviour:
   m_ObjectHideFlags: 1
