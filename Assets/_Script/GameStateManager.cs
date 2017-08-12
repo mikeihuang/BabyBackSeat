@@ -25,6 +25,7 @@ public class GameStateManager : MonoBehaviour
 
     public void ExitImagination()
     {
+        Horse.Hide();
         SaturationChange.isBlackAndWhite = true;
         CarAnimator.SetBool("TurnAround", true);
         //audio.Play();
