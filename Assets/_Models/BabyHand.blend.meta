@@ -16,6 +16,8 @@ ModelImporter:
     400006: Bone_001
     400008: Hand
     4300000: Hand
+    7400000: Close
+    7400002: Idle
     9500000: //RootNode
     13700000: Hand
   materials:
