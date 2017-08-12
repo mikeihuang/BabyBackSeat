@@ -19,9 +19,11 @@ public class testCarrotBag : VRTK_InteractableObject {
 
     private void OnTriggerStay(Collider other)
     {
+        Debug.Log("collieded");
         VRTK_InteractGrab grabObject = other.GetComponent<VRTK_InteractGrab>() ? other.GetComponent<VRTK_InteractGrab>() : other.GetComponentInParent<VRTK_InteractGrab>();
         if(CanGrabObject(grabObject))
         {
+            Debug.Log("grabbed");
             GameObject carrot = Instantiate(SpawnedObject);
             grabObject.GetComponent<VRTK_InteractTouch>().ForceTouch(carrot);
             grabObject.AttemptGrab();
