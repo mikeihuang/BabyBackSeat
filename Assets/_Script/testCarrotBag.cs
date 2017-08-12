@@ -6,6 +6,7 @@ using VRTK;
 public class testCarrotBag : VRTK_InteractableObject {
 
     public GameObject SpawnedObject;
+    private GameObject currentObject=null;
 
 	// Use this for initialization
 	void Start () {
@@ -32,6 +33,6 @@ public class testCarrotBag : VRTK_InteractableObject {
 
     private bool CanGrabObject(VRTK_InteractGrab grabbedObject)
     {
-        return (grabbedObject && grabbedObject.GetGrabbedObject() == null && grabbedObject.gameObject.GetComponent<VRTK_ControllerEvents>().grabPressed);
+        return (grabbedObject && grabbedObject.GetGrabbedObject() == null); // && grabbedObject.gameObject.GetComponent<VRTK_ControllerEvents>().grabPressed);
     }
 }
