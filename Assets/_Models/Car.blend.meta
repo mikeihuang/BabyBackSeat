@@ -129,6 +129,7 @@ ModelImporter:
     4300006: Baby
     4300008: Mom
     7400000: Idle
+    7400002: Default Take
     9500000: //RootNode
     13700000: Baby
     13700002: Car
