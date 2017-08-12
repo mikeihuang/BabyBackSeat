@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: {x: 0, y: 0, z: -10}
-  TreeSpawnOffsetMinMax: {x: 6, y: 35}
+  TreeSpawnOffsetMinMax: {x: 4, y: 15}
   TerrainPrefabs:
   - {fileID: 1089095692699316, guid: 6ff8518ccf892b9458c427ea2236edb7, type: 2}
   - {fileID: 1914786588810484, guid: 01ab72b0eb15f7646a286c20b9ef7cc4, type: 2}

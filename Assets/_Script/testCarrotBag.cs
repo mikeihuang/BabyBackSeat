@@ -6,6 +6,7 @@ using VRTK;
 public class testCarrotBag : VRTK_InteractableObject {
 
     public GameObject SpawnedObject;
+    private GameObject currentObject=null;
 
 	// Use this for initialization
 	void Start () {
@@ -19,17 +20,31 @@ public class testCarrotBag : VRTK_InteractableObject {
 
     private void OnTriggerStay(Collider other)
     {
+        Debug.Log("collided  "+other.tag);
         VRTK_InteractGrab grabObject = other.GetComponent<VRTK_InteractGrab>() ? other.GetComponent<VRTK_InteractGrab>() : other.GetComponentInParent<VRTK_InteractGrab>();
-        if(CanGrabObject(grabObject))
+        if (grabObject == null)
         {
-            GameObject carrot = Instantiate(SpawnedObject);
-            grabObject.GetComponent<VRTK_InteractTouch>().ForceTouch(carrot);
-            grabObject.AttemptGrab();
+            Debug.Log("grabObject==null");
+        }
+        else
+        {
+            if (grabObject.GetGrabbedObject() != null)
+            {
+                Debug.Log("grabbedObject!=null");
+            }
+            if (CanGrabObject(grabObject))
+            {
+                Debug.Log("grabbed");
+                GameObject carrot = Instantiate(SpawnedObject);
+                carrot.transform.position = other.transform.position;
+                grabObject.GetComponent<VRTK_InteractTouch>().ForceTouch(carrot);
+                grabObject.AttemptGrab();
+            }
         }
     }
 
-    private bool CanGrabObject(VRTK_InteractGrab grabbedObject)
+    private bool CanGrabObject(VRTK_InteractGrab grabbingObject)
     {
-        return (grabbedObject && grabbedObject.GetGrabbedObject() == null && grabbedObject.gameObject.GetComponent<VRTK_ControllerEvents>().grabPressed);
+        return (grabbingObject != null); // && grabbingObject.GetGrabbedObject() == null); // && grabbingObject.gameObject.GetComponent<VRTK_ControllerEvents>().grabPressed);
     }
 }
