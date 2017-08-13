@@ -26,12 +26,12 @@ public class ReturnToWhereYouBelong : MonoBehaviour {
     // also handle lightening the mood when we bounce
     private void OnTriggerEnter(Collider collider)
     {
-        if(Time.time>1.0f) GameStateManager.Instance.AdjustSaturation(+0.02f);
+        if(Time.timeSinceLevelLoad > 1.0f) GameStateManager.Instance.AdjustSaturation(+0.02f);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (Time.time > 1.0f) GameStateManager.Instance.AdjustSaturation(+0.02f);
+        if (Time.timeSinceLevelLoad > 1.0f) GameStateManager.Instance.AdjustSaturation(+0.02f);
     }
 
 } // End
