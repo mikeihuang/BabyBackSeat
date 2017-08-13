@@ -14,13 +14,12 @@ public class GameStateManager : MonoBehaviour
     public CamSaturationChange SaturationChange;
     public Animator CarAnimator;
     public Horsie Horse;
-
-    private AudioSource audio;
+    public AudioSource AdultAudio;
+    
 
     private void Start()
     {
         _instance = this;
-        audio = GetComponent<AudioSource>();
     }
 
     public void ExitImagination()
@@ -28,7 +27,7 @@ public class GameStateManager : MonoBehaviour
         Horse.Hide();
         SaturationChange.isBlackAndWhite = true;
         CarAnimator.SetBool("TurnAround", true);
-        //audio.Play();
+        AdultAudio.Play();
     }
 
     public void StartImagination()
