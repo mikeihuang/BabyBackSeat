@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.8967452, g: 0.6693229, b: 0.5709454, a: 1}
+  m_IndirectSpecularColor: {r: 0.8967561, g: 0.6689106, b: 0.5702842, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -3579,7 +3579,7 @@ Prefab:
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 630
+      value: 323
       objectReference: {fileID: 0}
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
@@ -5256,6 +5256,26 @@ CapsuleCollider:
   m_Height: 1.4
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.11915013}
+--- !u!114 &962852569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 962852565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c6f9509512f408780c98942334a56a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  audioClips:
+  - {fileID: 8300000, guid: 5f3fd191fa37240b8a3429fffcba8ea7, type: 3}
+  - {fileID: 8300000, guid: b30932d251d4940bfab57c748fb097e3, type: 3}
+  - {fileID: 8300000, guid: 4ddb23c115bbb4ec8a7b333edc537630, type: 3}
+  - {fileID: 8300000, guid: d375bdb1c496a497d85377e7b2b5bb6f, type: 3}
+  - {fileID: 8300000, guid: 38bf57abd188e45bd9db4385209a7858, type: 3}
+  - {fileID: 8300000, guid: 2fd886b10a81b42f685d9a0fbbc90e35, type: 3}
+  - {fileID: 8300000, guid: 3273a3b9425c1457dbe144bd96598439, type: 3}
 --- !u!1 &969119395
 GameObject:
   m_ObjectHideFlags: 0
@@ -8128,7 +8148,7 @@ Prefab:
         type: 2}
       propertyPath: AdultAudio
       value: 
-      objectReference: {fileID: 962852566}
+      objectReference: {fileID: 962852569}
     - target: {fileID: 114491757237681032, guid: a9b66704e9e074044aa56e6d3a0c3785,
         type: 2}
       propertyPath: SimSaturationChange

@@ -15,12 +15,25 @@ public class GameStateManager : MonoBehaviour
     public CamSaturationChange SimSaturationChange;
     public Animator CarAnimator;
     public Horsie Horse;
-    public AudioSource AdultAudio;
+    public RandomAudioClip AdultAudio;
+
+    private AudioSource music;
+    private RandomAudioClip randomMusic;
     
 
     private void Start()
     {
         _instance = this;
+        music = GetComponent<AudioSource>();
+    }
+
+    private void Update()
+    {
+        music.volume = SimSaturationChange.satActual;
+        if (!music.isPlaying)
+        {
+            randomMusic.Play();
+        }
     }
 
     public void ExitImagination()

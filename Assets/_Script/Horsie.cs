@@ -10,6 +10,8 @@ public class Horsie : MonoBehaviour {
 	public Vector3 RotationScale = new Vector3 ();
 	public Vector3 RotationSpeed = new Vector3 ();
 
+    public CamSaturationChange CamSat;
+
     private AudioSource eatingSound;
     private Animator anim;
 
@@ -23,7 +25,6 @@ public class Horsie : MonoBehaviour {
 
 		RootPosition = this.transform.position;
 		RootRotation = this.transform.rotation;
-        Show();
 	}
 	
 	// Update is called once per frame
@@ -39,6 +40,14 @@ public class Horsie : MonoBehaviour {
 			RotationScale.y * Mathf.Sin (RotationSpeed.y * Time.time),
 			RotationScale.z * Mathf.Sin (RotationSpeed.z * Time.time)
 		);
+        if (CamSat.satActual > 0.3f)
+        {
+            anim.SetBool("Show", true);
+        }
+        else
+        {
+            anim.SetBool("Show", false);
+        }
 	}
 
     public void Show()
