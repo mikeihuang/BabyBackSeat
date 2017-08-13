@@ -17,7 +17,16 @@ public class ChangeScene : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		
-		SceneManager.LoadScene("_MASTER_SCENE");
+		StartCoroutine("Wait");
 	
 	}
+
+	IEnumerator Wait()
+	{
+		yield return new WaitForSeconds(3);
+
+		SceneManager.LoadScene("_MASTER_SCENE");
+	}
+
+
 }
