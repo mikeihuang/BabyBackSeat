@@ -25,6 +25,7 @@ public class GameStateManager : MonoBehaviour
     {
         _instance = this;
         music = GetComponent<AudioSource>();
+        randomMusic = GetComponent<RandomAudioClip>();
     }
 
     private void Update()
@@ -38,11 +39,18 @@ public class GameStateManager : MonoBehaviour
 
     public void ExitImagination()
     {
+        StartCoroutine(exitImagination());
+    }
+
+    private IEnumerator exitImagination()
+    {
         Horse.Hide();
         SaturationChange.isBlackAndWhite = true;
-        if (SimSaturationChange != null) SimSaturationChange.isBlackAndWhite = true;
+        if (SimSaturationChange != null) SaturationChange.isBlackAndWhite = true;
         CarAnimator.SetBool("TurnAround", true);
         AdultAudio.Play();
+        yield return new WaitForSeconds(1.5f);
+        CarAnimator.SetBool("TurnAround", false);
     }
 
     public void StartImagination()
