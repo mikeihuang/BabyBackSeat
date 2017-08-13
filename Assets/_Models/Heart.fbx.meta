@@ -1,47 +1,21 @@
 fileFormatVersion: 2
-guid: 6b3483c91214595479c8a15d683d954b
-timeCreated: 1502657119
+guid: a673458c8635dc14aa3d7212b4078666
+timeCreated: 1502645487
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: mesh1065571294
-    100002: mesh1070799620
-    100004: mesh1387154207
-    100006: mesh1646536947
-    100008: mesh1818248137
-    100010: mesh1913270078
-    100012: mesh415028736
-    100014: //RootNode
-    400000: mesh1065571294
-    400002: mesh1070799620
-    400004: mesh1387154207
-    400006: mesh1646536947
-    400008: mesh1818248137
-    400010: mesh1913270078
-    400012: mesh415028736
-    400014: //RootNode
-    2300000: mesh1065571294
-    2300002: mesh1070799620
-    2300004: mesh1387154207
-    2300006: mesh1646536947
-    2300008: mesh1818248137
-    2300010: mesh1913270078
-    2300012: mesh415028736
-    3300000: mesh1065571294
-    3300002: mesh1070799620
-    3300004: mesh1387154207
-    3300006: mesh1646536947
-    3300008: mesh1818248137
-    3300010: mesh1913270078
-    3300012: mesh415028736
-    4300000: mesh1065571294
-    4300002: mesh1070799620
-    4300004: mesh1387154207
-    4300006: mesh1646536947
-    4300008: mesh1818248137
-    4300010: mesh1913270078
-    4300012: mesh415028736
+    100000: CINEMA_4D_Editor
+    100002: //RootNode
+    100004: HeartMesh
+    400000: CINEMA_4D_Editor
+    400002: //RootNode
+    400004: HeartMesh
+    2000000: CINEMA_4D_Editor
+    2300000: HeartMesh
+    3300000: HeartMesh
+    4300000: HeartMesh
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -111,7 +85,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

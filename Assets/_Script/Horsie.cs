@@ -72,7 +72,7 @@ public class Horsie : MonoBehaviour {
         anim.SetBool("Chew", true);
 
 		// Food position change
-		food.transform.position = new Vector3 (0f,0f,0.5f);
+		food.transform.position = new Vector3 (0f,-1f,0.5f);
 
         if (eatingSound)
         {
