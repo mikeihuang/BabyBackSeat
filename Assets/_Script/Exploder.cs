@@ -7,14 +7,14 @@ public class Exploder : MonoBehaviour {
 	public ParticleSystem ExplosionParticleSystem;
 	public List<MeshRenderer> myRenderers;
 
-	public AudioSource audioSource;
+	public RandomAudioClip randomAudioClip;
 
 	// Use this for initialization
 	void Start () {
 		myRenderers.AddRange(GetComponentsInChildren<MeshRenderer> ());
 		myRenderers.Add (GetComponent<MeshRenderer> ());
 		ExplosionParticleSystem = GetComponentInChildren<ParticleSystem> ();
-		audioSource = GetComponent<AudioSource> ();
+		randomAudioClip = GetComponent<RandomAudioClip> ();
 	}
 
 	public void Reset() {
@@ -46,8 +46,8 @@ public class Exploder : MonoBehaviour {
 			ExplosionParticleSystem.Play ();
 		}
 
-		if (audioSource) {
-			audioSource.Play ();
+		if (randomAudioClip) {
+			randomAudioClip.Play ();
 		}
 	}
 }

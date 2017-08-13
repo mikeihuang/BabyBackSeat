@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 54475775833224666}
   - component: {fileID: 136742768057262606}
   - component: {fileID: 82449423323553716}
+  - component: {fileID: 114888581955714664}
   m_Layer: 8
   m_Name: Tree_02a_Autumn
   m_TagString: Untagged
@@ -69,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1914786588810484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.236102, y: -1.0012839, z: 0.64257526}
+  m_LocalPosition: {x: -8.915475, y: -3.5610576, z: -2.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4790403894486162}
@@ -210,6 +211,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114888581955714664
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1914786588810484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c6f9509512f408780c98942334a56a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  audioClips:
+  - {fileID: 8300000, guid: 212ac52792b554c388354aaec3acff0e, type: 3}
+  - {fileID: 8300000, guid: e631178781a2f45f0be51083596c70ea, type: 3}
+  - {fileID: 8300000, guid: 82e6410cca69a426ba2cac9c5fa52ef0, type: 3}
+  - {fileID: 8300000, guid: 7a25f2dde2fa44c269c124ad5ded591a, type: 3}
 --- !u!114 &114949108251048448
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,7 +241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ExplosionParticleSystem: {fileID: 0}
   myRenderers: []
-  audioSource: {fileID: 0}
+  randomAudioClip: {fileID: 0}
 --- !u!136 &136742768057262606
 CapsuleCollider:
   m_ObjectHideFlags: 1

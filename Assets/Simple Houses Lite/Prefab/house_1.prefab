@@ -243,6 +243,7 @@ GameObject:
   - component: {fileID: 54567230502059802}
   - component: {fileID: 114095384702311618}
   - component: {fileID: 82076730128115762}
+  - component: {fileID: 114715000679973492}
   m_Layer: 9
   m_Name: house_1
   m_TagString: Untagged
@@ -313,7 +314,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014201024826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 63.895042, y: 58.854805, z: -62.62525}
+  m_LocalPosition: {x: -13.77, y: 8.710551, z: -12.551611}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4000013675862428}
@@ -1081,7 +1082,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ExplosionParticleSystem: {fileID: 0}
   myRenderers: []
+  randomAudioClip: {fileID: 0}
+--- !u!114 &114715000679973492
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014201024826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c6f9509512f408780c98942334a56a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
+  audioClips:
+  - {fileID: 8300000, guid: 212ac52792b554c388354aaec3acff0e, type: 3}
+  - {fileID: 8300000, guid: e631178781a2f45f0be51083596c70ea, type: 3}
+  - {fileID: 8300000, guid: 82e6410cca69a426ba2cac9c5fa52ef0, type: 3}
+  - {fileID: 8300000, guid: 7a25f2dde2fa44c269c124ad5ded591a, type: 3}
 --- !u!198 &198395134611177366
 ParticleSystem:
   m_ObjectHideFlags: 1
