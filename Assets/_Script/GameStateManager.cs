@@ -30,7 +30,7 @@ public class GameStateManager : MonoBehaviour
 
     private void Update()
     {
-        music.volume = SaturationChange.satActual;
+        music.volume = (SaturationChange.satActual - 0.3f) / 0.7f;
         if (!music.isPlaying)
         {
             randomMusic.Play();

@@ -40,7 +40,7 @@ public class Horsie : MonoBehaviour {
 			RotationScale.y * Mathf.Sin (RotationSpeed.y * Time.time),
 			RotationScale.z * Mathf.Sin (RotationSpeed.z * Time.time)
 		);
-        if (CamSat.satActual > 0.3f)
+        if (CamSat.satActual > 0.7f)
         {
             anim.SetBool("Show", true);
         }
