@@ -30,7 +30,7 @@ public class GameStateManager : MonoBehaviour
 
     private void Update()
     {
-        music.volume = SimSaturationChange.satActual;
+        music.volume = SaturationChange.satActual;
         if (!music.isPlaying)
         {
             randomMusic.Play();
