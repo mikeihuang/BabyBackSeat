@@ -29,7 +29,7 @@ public class TerrainSpawner : MonoBehaviour {
 
 	void UpdateTerrain () {
 		foreach (GameObject t in TerrainPool) {
-            t.transform.position += speed * Time.deltaTime * (0.5f + 0.5f * CamSat.satActual);
+            t.transform.position += speed * Time.deltaTime * (0.2f + 0.8f * CamSat.satActual);
 			if (t.transform.position.z < -750) {
 				t.transform.position += Vector3.forward * 1000;
 				Exploder e = t.GetComponent<Exploder> ();

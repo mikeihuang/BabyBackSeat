@@ -8328,8 +8328,8 @@ MonoBehaviour:
   pointerToggleButton: 10
   pointerSetButton: 10
   grabToggleButton: 7
-  useToggleButton: 7
-  uiClickButton: 7
+  useToggleButton: 3
+  uiClickButton: 3
   menuToggleButton: 14
   axisFidelity: 1
   triggerClickThreshold: 1
