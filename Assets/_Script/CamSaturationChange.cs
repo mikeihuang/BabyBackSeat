@@ -21,6 +21,7 @@ public class CamSaturationChange : MonoBehaviour {
     public float satChaseRate = 0.6f;
 
     [Header("Saturation Limits")]
+    public float initialSaturation=0.6f;
     public float minSaturation;
     public float maxSaturation; 
 
@@ -30,8 +31,8 @@ public class CamSaturationChange : MonoBehaviour {
 	void Awake () {
 		filters = GetComponent<PostProcessingBehaviour> ();
 		profile = filters.profile;
-        satValue = 1.0f;
-        satActual = 1.0f;
+        satValue = initialSaturation;
+        satActual = initialSaturation;
 	}
 
     public void AdjustSaturation(float delta)
