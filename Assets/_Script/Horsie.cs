@@ -21,7 +21,6 @@ public class Horsie : MonoBehaviour {
 
 		RootPosition = this.transform.position;
 		RootRotation = this.transform.rotation;
-        Show();
 	}
 	
 	// Update is called once per frame
