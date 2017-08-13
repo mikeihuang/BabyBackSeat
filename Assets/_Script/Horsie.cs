@@ -18,10 +18,14 @@ public class Horsie : MonoBehaviour {
 	private Vector3 RootPosition;
 	private Quaternion RootRotation;
 
+	public RandomAudioClip appearSound;
+
 	// Use this for initialization
 	void Start () {
         eatingSound = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
+
+		appearSound = GetComponentInChildren<RandomAudioClip> ();
 
 		RootPosition = this.transform.position;
 		RootRotation = this.transform.rotation;
@@ -42,6 +46,9 @@ public class Horsie : MonoBehaviour {
 		);
         if (CamSat.satActual > 0.7f)
         {
+			if (anim.GetBool ("Show") == false) {
+				appearSound.Play ();
+			}
             anim.SetBool("Show", true);
         }
         else
