@@ -49,5 +49,8 @@ public class Exploder : MonoBehaviour {
 		if (audioSource) {
 			audioSource.Play ();
 		}
+
+        // big win
+        GameStateManager.Instance.AdjustSaturation(+0.2f);
 	}
 }

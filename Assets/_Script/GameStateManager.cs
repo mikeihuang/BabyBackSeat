@@ -12,6 +12,7 @@ public class GameStateManager : MonoBehaviour
     }
 
     public CamSaturationChange SaturationChange;
+    public CamSaturationChange SimSaturationChange;
     public Animator CarAnimator;
     public Horsie Horse;
     public AudioSource AdultAudio;
@@ -26,6 +27,7 @@ public class GameStateManager : MonoBehaviour
     {
         Horse.Hide();
         SaturationChange.isBlackAndWhite = true;
+        if (SimSaturationChange != null) SimSaturationChange.isBlackAndWhite = true;
         CarAnimator.SetBool("TurnAround", true);
         AdultAudio.Play();
     }
@@ -33,6 +35,13 @@ public class GameStateManager : MonoBehaviour
     public void StartImagination()
     {
         SaturationChange.isBlackAndWhite = false;
+        if (SimSaturationChange != null) SimSaturationChange.isBlackAndWhite = false;
         Horse.Show();
+    }
+
+    public void AdjustSaturation(float delta)
+    {
+        if (SaturationChange != null) SaturationChange.AdjustSaturation(delta);
+        if (SimSaturationChange != null) SimSaturationChange.AdjustSaturation(delta);
     }
 }
