@@ -54,6 +54,8 @@ public class Horsie : MonoBehaviour {
     public IEnumerator Eat(GameObject food)
     {
         Debug.Log("Horsie ate the " + food.name);
+        // Reward
+        GameStateManager.Instance.AdjustSaturation(+0.3f);
         anim.SetBool("Chew", true);
         food.SetActive(false);
         if (eatingSound)
