@@ -19,6 +19,7 @@ public class RandomAudioClip : MonoBehaviour {
 				if (audioClips.Length > 0) {
 					int r = Random.Range (0, audioClips.Length);
 					audioSource.clip = audioClips [r];
+					audioSource.pitch = Random.Range (0.8f, 1.2f);
 					audioSource.Play ();
 				}
 			}
