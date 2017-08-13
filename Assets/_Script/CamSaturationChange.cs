@@ -16,6 +16,8 @@ public class CamSaturationChange : MonoBehaviour {
 
 	[Header("Color Change Speed")]
 	public float speed = 0.01F;
+    public float initSpeed = 0.2f;
+    public float initDuration = 3.0f;
     public float satChaseRate = 0.6f;
 
     [Header("Saturation Limits")]
@@ -72,7 +74,14 @@ public class CamSaturationChange : MonoBehaviour {
         else
         {
             ColorGradingModel.Settings ColorSet = profile.colorGrading.settings;
-            satValue -= speed * Time.deltaTime;
+            if (Time.time < initDuration)
+            {
+                satValue -= initSpeed * Time.deltaTime;
+            }
+            else
+            {
+                satValue -= speed * Time.deltaTime;
+            }
             if (satValue < minSaturation) satValue = minSaturation;
             if (satValue > maxSaturation) satValue = maxSaturation;
             satActual += (satValue - satActual) * satChaseRate * Time.deltaTime;

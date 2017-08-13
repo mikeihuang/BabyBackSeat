@@ -3755,11 +3755,13 @@ MonoBehaviour:
   isBlackAndWhite: 1
   useFlag: 0
   speed: 0.01
-  satChaseRate: 0.6
-  minSaturation: 0
-  maxSaturation: 0
-  satValue: 0
-  satActual: 0
+  initSpeed: 0.2
+  initDuration: 3
+  satChaseRate: 0.75
+  minSaturation: 0.1
+  maxSaturation: 1
+  satValue: 1
+  satActual: 1
 --- !u!1001 &738346880
 Prefab:
   m_ObjectHideFlags: 0
@@ -7875,14 +7877,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37406285bd19ae8418259c3fac91b30d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isBlackAndWhite: 0
+  isBlackAndWhite: 1
   useFlag: 0
-  speed: 0.05
-  satChaseRate: 0.6
+  speed: 0.01
+  initSpeed: 0.2
+  initDuration: 3
+  satChaseRate: 0.75
   minSaturation: 0.1
   maxSaturation: 1
-  satValue: 0
-  satActual: 0
+  satValue: 1
+  satActual: 1
 --- !u!114 &1623721200
 MonoBehaviour:
   m_ObjectHideFlags: 0
