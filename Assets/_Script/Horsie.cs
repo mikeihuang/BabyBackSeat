@@ -63,10 +63,17 @@ public class Horsie : MonoBehaviour {
     public IEnumerator Eat(GameObject food)
     {
         Debug.Log("Horsie ate the " + food.name);
+
+		// Heart Particle for eating
+		transform.Find("FX_Heart").GetComponent<ParticleSystem>().Play();
+
         // Reward
         GameStateManager.Instance.AdjustSaturation(+0.3f);
         anim.SetBool("Chew", true);
-        food.SetActive(false);
+
+		// Food position change
+		food.transform.position = new Vector3 (0f,0f,0.5f);
+
         if (eatingSound)
         {
             eatingSound.Play();
