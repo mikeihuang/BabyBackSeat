@@ -23,10 +23,10 @@ GameObject:
   - component: {fileID: 23395339488827792}
   - component: {fileID: 65412855620268666}
   - component: {fileID: 54825002592261142}
-  - component: {fileID: 114672531559352054}
   - component: {fileID: 114986379817900978}
   - component: {fileID: 114914211271606722}
   - component: {fileID: 114197081554732766}
+  - component: {fileID: 114274533843037068}
   m_Layer: 0
   m_Name: grape
   m_TagString: Untagged
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 163d062a274e87146ac7baf4fe5102af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114672531559352054
+--- !u!114 &114274533843037068
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -132,11 +132,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1084104074745646}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3abaf4521bf2344ea21ed3020b98eb2, type: 3}
+  m_Script: {fileID: 11500000, guid: b100cb8a6cc20ad4390d5e0a39cfa84f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   disableWhenIdle: 1
-  touchHighlightColor: {r: 1, g: 1, b: 0, a: 0}
+  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   allowedTouchControllers: 0
   ignoredColliders: []
   isGrabbable: 1

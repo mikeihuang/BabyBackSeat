@@ -23,10 +23,10 @@ GameObject:
   - component: {fileID: 23800031777476030}
   - component: {fileID: 65188277205834246}
   - component: {fileID: 54793751617273100}
-  - component: {fileID: 114846079268688330}
   - component: {fileID: 114053816913155312}
   - component: {fileID: 114933725068698182}
   - component: {fileID: 114706364543022866}
+  - component: {fileID: 114175006024859716}
   m_Layer: 0
   m_Name: lemon
   m_TagString: Untagged
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114706364543022866
+--- !u!114 &114175006024859716
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -132,22 +132,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1591078108904458}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 163d062a274e87146ac7baf4fe5102af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114846079268688330
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1591078108904458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3abaf4521bf2344ea21ed3020b98eb2, type: 3}
+  m_Script: {fileID: 11500000, guid: b100cb8a6cc20ad4390d5e0a39cfa84f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   disableWhenIdle: 1
-  touchHighlightColor: {r: 1, g: 1, b: 0, a: 0}
+  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   allowedTouchControllers: 0
   ignoredColliders: []
   isGrabbable: 1
@@ -165,6 +154,17 @@ MonoBehaviour:
   useOverrideButton: 0
   allowedUseControllers: 0
   usingState: 0
+--- !u!114 &114706364543022866
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1591078108904458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163d062a274e87146ac7baf4fe5102af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114933725068698182
 MonoBehaviour:
   m_ObjectHideFlags: 1

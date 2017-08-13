@@ -23,10 +23,10 @@ GameObject:
   - component: {fileID: 23266191836975610}
   - component: {fileID: 65955953248848278}
   - component: {fileID: 54425695384608204}
-  - component: {fileID: 114847945121305106}
   - component: {fileID: 114306822141727852}
   - component: {fileID: 114002568296162788}
   - component: {fileID: 114935922420494280}
+  - component: {fileID: 114532486287215598}
   m_Layer: 0
   m_Name: icecream
   m_TagString: Untagged
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114847945121305106
+--- !u!114 &114532486287215598
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -151,11 +151,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1397667920557076}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3abaf4521bf2344ea21ed3020b98eb2, type: 3}
+  m_Script: {fileID: 11500000, guid: b100cb8a6cc20ad4390d5e0a39cfa84f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   disableWhenIdle: 1
-  touchHighlightColor: {r: 1, g: 1, b: 0, a: 0}
+  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   allowedTouchControllers: 0
   ignoredColliders: []
   isGrabbable: 1
