@@ -2,24 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using VRTK;
+
 
 public class ChangeScene : MonoBehaviour {
 
 	public GameObject VRcamera;
+    VRTK_InteractableObject io;
 
 	// Use this for initialization
 	void Start () {
-		
+        io = GetComponent<VRTK_InteractableObject>();
+        io.InteractableObjectGrabbed += Io_InteractableObjectGrabbed;
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void Io_InteractableObjectGrabbed(object sender, InteractableObjectEventArgs e)
+    {
+        //throw new System.NotImplementedException();
+        StartCoroutine("Wait");
+    }
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 
 	void OnTriggerEnter(Collider other){
 		
-		StartCoroutine("Wait");
+		//StartCoroutine("Wait");
 	
 	}
 
