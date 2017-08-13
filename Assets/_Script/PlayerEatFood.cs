@@ -31,6 +31,9 @@ public class PlayerEatFood : MonoBehaviour {
 
 				// Start timer to reappear the food
 				StartCoroutine(ReAppearFood());
+
+				// GameState
+				if(Time.time>1.0f) GameStateManager.Instance.AdjustSaturation(+0.02f);
 			}
 		}
 	}
