@@ -65,7 +65,9 @@ public class Horsie : MonoBehaviour {
         Debug.Log("Horsie ate the " + food.name);
 
 		// Heart Particle for eating
-		transform.Find("FX_Heart").GetComponent<ParticleSystem>().Play();
+		if (!transform.Find ("FX_Heart").GetComponent<ParticleSystem> ().isPlaying) {
+			transform.Find ("FX_Heart").GetComponent<ParticleSystem> ().Play ();
+		}
 
         // Reward
         GameStateManager.Instance.AdjustSaturation(+0.3f);
