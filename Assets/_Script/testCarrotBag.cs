@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using VRTK;
 
-public class testCarrotBag : VRTK_InteractableObject {
+public class testCarrotBag : MonoBehaviour {
 
     public GameObject SpawnedObject;
-    private GameObject currentObject=null;
+    public float spawnDelay = 1f;
+    public int maxCarrots = 50;
+    private float spawnDelayTimer = 0f;
+    private int spawnCount = 0;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -18,33 +21,25 @@ public class testCarrotBag : VRTK_InteractableObject {
 		
 	}
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerStay(Collider collider)
     {
-        Debug.Log("collided  "+other.tag);
-        VRTK_InteractGrab grabObject = other.GetComponent<VRTK_InteractGrab>() ? other.GetComponent<VRTK_InteractGrab>() : other.GetComponentInParent<VRTK_InteractGrab>();
-        if (grabObject == null)
+        VRTK_InteractGrab grabbingController = (collider.gameObject.GetComponent<VRTK_InteractGrab>() ? collider.gameObject.GetComponent<VRTK_InteractGrab>() : collider.gameObject.GetComponentInParent<VRTK_InteractGrab>());
+        if (CanGrab(grabbingController) && Time.time >= spawnDelayTimer)
         {
-            Debug.Log("grabObject==null");
-        }
-        else
-        {
-            if (grabObject.GetGrabbedObject() != null)
+            if (spawnCount < maxCarrots)
             {
-                Debug.Log("grabbedObject!=null");
-            }
-            if (CanGrabObject(grabObject))
-            {
-                Debug.Log("grabbed");
-                GameObject carrot = Instantiate(SpawnedObject);
-                carrot.transform.position = other.transform.position;
-                grabObject.GetComponent<VRTK_InteractTouch>().ForceTouch(carrot);
-                grabObject.AttemptGrab();
+                GameObject newArrow = Instantiate(SpawnedObject);
+                newArrow.name = "ArrowClone";
+                grabbingController.GetComponent<VRTK_InteractTouch>().ForceTouch(newArrow);
+                grabbingController.AttemptGrab();
+                spawnDelayTimer = Time.time + spawnDelay;
+                spawnCount++;
             }
         }
     }
 
-    private bool CanGrabObject(VRTK_InteractGrab grabbingObject)
+    private bool CanGrab(VRTK_InteractGrab grabbingController)
     {
-        return (grabbingObject != null); // && grabbingObject.GetGrabbedObject() == null); // && grabbingObject.gameObject.GetComponent<VRTK_ControllerEvents>().grabPressed);
+        return (grabbingController && grabbingController.GetGrabbedObject() == null && grabbingController.IsGrabButtonPressed());
     }
 }
