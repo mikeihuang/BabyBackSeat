@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerEatFood : MonoBehaviour {
 
 	private AudioSource eatingSound;
+	private GameObject tempFood;
 
 	void Start(){
 		eatingSound = GetComponent<AudioSource>();
@@ -14,6 +15,9 @@ public class PlayerEatFood : MonoBehaviour {
 		if (Time.timeSinceLevelLoad > 5F) { // Run it after 5 secs of game loading
 			if (food.gameObject.tag == "Food") {
 
+				// Reference it outside of script
+				tempFood = food.gameObject;
+
 				// Player Eating Sound
 				if (eatingSound) {
 					eatingSound.Play ();
@@ -22,16 +26,18 @@ public class PlayerEatFood : MonoBehaviour {
 				// Particle Effect
 				transform.Find ("FX_Heart").GetComponent<ParticleSystem> ().Play ();
 
-				// Instantiate new food
-
-				Instantiate (food, new Vector3 (0f, 0f, 0.5f), Quaternion.identity);
-
 				// Food set active false
 				food.gameObject.SetActive (false);
 
-				// Destroy Food
-				Destroy (food);
+				// Start timer to reappear the food
+				StartCoroutine(ReAppearFood());
 			}
 		}
+	}
+
+	IEnumerator ReAppearFood(){
+		yield return new WaitForSeconds (10);
+		tempFood.SetActive (true);
+		tempFood.transform.position = new Vector3 (0f, -1f, 0.5f);
 	}
 }
