@@ -16,17 +16,20 @@ public class CamSaturationChange : MonoBehaviour {
 
 	[Header("Color Change Speed")]
 	public float speed = 0.01F;
+    public float satChaseRate = 0.6f;
 
     [Header("Saturation Limits")]
     public float minSaturation;
     public float maxSaturation; 
 
     public float satValue;
+    public float satActual;
 
 	void Awake () {
 		filters = GetComponent<PostProcessingBehaviour> ();
 		profile = filters.profile;
         satValue = 1.0f;
+        satActual = 1.0f;
 	}
 
     public void AdjustSaturation(float delta)
@@ -37,6 +40,10 @@ public class CamSaturationChange : MonoBehaviour {
         if (satValue > maxSaturation) satValue = maxSaturation;
         //Debug.Log(string.Format("sat adjust {0} to {1}", delta, satValue));
         //Debug.Log(string.Format("sat value post {0}", satValue));
+    }
+    public void ForceSaturationSync()
+    {
+        satActual = satValue;
     }
 
 	void Update (){
@@ -68,7 +75,8 @@ public class CamSaturationChange : MonoBehaviour {
             satValue -= speed * Time.deltaTime;
             if (satValue < minSaturation) satValue = minSaturation;
             if (satValue > maxSaturation) satValue = maxSaturation;
-            ColorSet.basic.saturation = satValue;
+            satActual += (satValue - satActual) * satChaseRate * Time.deltaTime;
+            ColorSet.basic.saturation = satActual;
             //Debug.Log(string.Format("Sat: {0}", satValue));
             profile.colorGrading.settings = ColorSet;
         }

@@ -44,4 +44,10 @@ public class GameStateManager : MonoBehaviour
         if (SaturationChange != null) SaturationChange.AdjustSaturation(delta);
         if (SimSaturationChange != null) SimSaturationChange.AdjustSaturation(delta);
     }
+
+    public void ForceSaturationSync()
+    {
+        if (SaturationChange != null) SaturationChange.ForceSaturationSync();
+        if (SimSaturationChange != null) SimSaturationChange.ForceSaturationSync();
+    }
 }

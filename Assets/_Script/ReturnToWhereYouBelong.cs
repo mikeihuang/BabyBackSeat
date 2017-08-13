@@ -29,4 +29,9 @@ public class ReturnToWhereYouBelong : MonoBehaviour {
         GameStateManager.Instance.AdjustSaturation(+0.02f);
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        GameStateManager.Instance.AdjustSaturation(+0.02f);
+    }
+
 } // End
