@@ -10,15 +10,20 @@ public class Horsie : MonoBehaviour {
 	public Vector3 RotationScale = new Vector3 ();
 	public Vector3 RotationSpeed = new Vector3 ();
 
+    private AudioSource eatingSound;
+    private Animator anim;
+
 	private Vector3 RootPosition;
 	private Quaternion RootRotation;
 
-	public AudioSource EatingSound;
-
 	// Use this for initialization
 	void Start () {
+        eatingSound = GetComponent<AudioSource>();
+        anim = GetComponent<Animator>();
+
 		RootPosition = this.transform.position;
 		RootRotation = this.transform.rotation;
+        Show();
 	}
 	
 	// Update is called once per frame
@@ -36,17 +41,36 @@ public class Horsie : MonoBehaviour {
 		);
 	}
 
-	public void Eat(GameObject food) {
-		Debug.Log ("Horsie ate the " + food.name);
-		food.SetActive (false);
-		if (EatingSound) {
-			EatingSound.Play ();
-		}
-	}
+    public void Show()
+    {
+        anim.SetBool("Show", true);
+    }
 
-	void OnCollisionEnter(Collision collision)
-	{
-		Debug.Log ("Horsie's mouth collided with " + collision.gameObject.name);
+    public void Hide()
+    {
+        anim.SetBool("Show", false);
+    }
 
-	}
+    public IEnumerator Eat(GameObject food)
+    {
+        Debug.Log("Horsie ate the " + food.name);
+        anim.SetBool("Chew", true);
+        food.SetActive(false);
+        if (eatingSound)
+        {
+            eatingSound.Play();
+        }
+        yield return null;
+        anim.SetBool("Chew", false);
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Horsie's mouth collided with " + collision.gameObject.name);
+        if (collision.gameObject.tag == "Food")
+        {
+            StartCoroutine(Eat(collision.gameObject));
+        }
+    }
+
 }
