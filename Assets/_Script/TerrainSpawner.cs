@@ -15,6 +15,8 @@ public class TerrainSpawner : MonoBehaviour {
 
 	public List<GameObject> TerrainPool = new List<GameObject> ();
 
+    public CamSaturationChange CamSat;
+
 	// Use this for initialization
 	void Start () {
 		InstantiatePrefabs ();
@@ -27,7 +29,7 @@ public class TerrainSpawner : MonoBehaviour {
 
 	void UpdateTerrain () {
 		foreach (GameObject t in TerrainPool) {
-			t.transform.position += speed * Time.deltaTime;
+            t.transform.position += speed * Time.deltaTime * (0.5f + 0.5f * CamSat.satActual);
 			if (t.transform.position.z < -750) {
 				t.transform.position += Vector3.forward * 1000;
 				Exploder e = t.GetComponent<Exploder> ();
