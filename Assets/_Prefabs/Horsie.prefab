@@ -486,7 +486,7 @@ MonoBehaviour:
   RotationScale: {x: 0, y: 0, z: 0}
   RotationSpeed: {x: 0, y: 0, z: 0}
   CamSat: {fileID: 0}
-  appearSound: {fileID: 0}
+  appearSound: {fileID: 114884837463800148}
 --- !u!114 &114884837463800148
 MonoBehaviour:
   m_ObjectHideFlags: 1
