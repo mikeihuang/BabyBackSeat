@@ -3805,6 +3805,11 @@ Prefab:
       propertyPath: m_Name
       value: HorseBlend
       objectReference: {fileID: 0}
+    - target: {fileID: 114127667006438910, guid: 50e106c1288614b53a813678caa807f5,
+        type: 2}
+      propertyPath: CamSat
+      value: 
+      objectReference: {fileID: 736160625}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 50e106c1288614b53a813678caa807f5, type: 2}
   m_IsPrefabParent: 0
