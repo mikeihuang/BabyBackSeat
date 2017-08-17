@@ -21,14 +21,15 @@ GameObject:
   - component: {fileID: 4181037803160962}
   - component: {fileID: 33241261778047970}
   - component: {fileID: 23856189567900452}
-  - component: {fileID: 65242163406742034}
   - component: {fileID: 54384491949865034}
-  - component: {fileID: 114837804255567052}
   - component: {fileID: 114383299945787286}
   - component: {fileID: 114158409960089646}
   - component: {fileID: 114953891494953898}
   - component: {fileID: 114610033908144828}
   - component: {fileID: 82559676074277254}
+  - component: {fileID: 135263787891492346}
+  - component: {fileID: 114193571331617220}
+  - component: {fileID: 114505907213548028}
   m_Layer: 0
   m_Name: acorn
   m_TagString: Untagged
@@ -103,18 +104,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65242163406742034
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1794504184310750}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.26208755, y: 0.38635826, z: 0.26208755}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &82559676074277254
 AudioSource:
   m_ObjectHideFlags: 1
@@ -214,6 +203,36 @@ MonoBehaviour:
   onGrabCollisionDelay: 0
   destroyImmediatelyOnThrow: 1
   breakForce: 1500
+--- !u!114 &114193571331617220
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1794504184310750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3abaf4521bf2344ea21ed3020b98eb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableWhenIdle: 1
+  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  allowedTouchControllers: 0
+  ignoredColliders: []
+  isGrabbable: 1
+  holdButtonToGrab: 1
+  stayGrabbedOnTeleport: 1
+  validDrop: 1
+  grabOverrideButton: 0
+  allowedGrabControllers: 0
+  grabAttachMechanicScript: {fileID: 0}
+  secondaryGrabActionScript: {fileID: 0}
+  isUsable: 0
+  holdButtonToUse: 1
+  useOnlyIfGrabbed: 0
+  pointerActivatesUseAction: 0
+  useOverrideButton: 0
+  allowedUseControllers: 0
+  usingState: 0
 --- !u!114 &114383299945787286
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,6 +242,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114505907213548028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1794504184310750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b100cb8a6cc20ad4390d5e0a39cfa84f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114610033908144828
@@ -248,36 +278,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: aec6606aa27fbea4bbe0e847d3706ed4, type: 3}
   - {fileID: 8300000, guid: 4806278e11e52f241801a92e91abd1f5, type: 3}
   - {fileID: 8300000, guid: 949e05e42f66a48409515034f12f46dc, type: 3}
---- !u!114 &114837804255567052
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1794504184310750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b100cb8a6cc20ad4390d5e0a39cfa84f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  disableWhenIdle: 1
-  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
-  allowedTouchControllers: 0
-  ignoredColliders: []
-  isGrabbable: 1
-  holdButtonToGrab: 1
-  stayGrabbedOnTeleport: 1
-  validDrop: 1
-  grabOverrideButton: 0
-  allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 0}
-  secondaryGrabActionScript: {fileID: 0}
-  isUsable: 0
-  holdButtonToUse: 1
-  useOnlyIfGrabbed: 0
-  pointerActivatesUseAction: 0
-  useOverrideButton: 0
-  allowedUseControllers: 0
-  usingState: 0
 --- !u!114 &114953891494953898
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -289,3 +289,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 163d062a274e87146ac7baf4fe5102af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &135263787891492346
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1794504184310750}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.19317913
+  m_Center: {x: 0, y: 0, z: 0}

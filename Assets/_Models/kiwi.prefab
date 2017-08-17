@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 114354092135161758}
   - component: {fileID: 114046976099423914}
   - component: {fileID: 82617830319854264}
+  - component: {fileID: 114567587832161678}
   m_Layer: 0
   m_Name: kiwi
   m_TagString: Untagged
@@ -248,6 +249,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b100cb8a6cc20ad4390d5e0a39cfa84f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114497078924438518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1245727931597318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163d062a274e87146ac7baf4fe5102af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114567587832161678
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1245727931597318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3abaf4521bf2344ea21ed3020b98eb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   disableWhenIdle: 1
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   allowedTouchControllers: 0
@@ -267,17 +290,6 @@ MonoBehaviour:
   useOverrideButton: 0
   allowedUseControllers: 0
   usingState: 0
---- !u!114 &114497078924438518
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1245727931597318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 163d062a274e87146ac7baf4fe5102af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114838820672335152
 MonoBehaviour:
   m_ObjectHideFlags: 1
