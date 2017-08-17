@@ -5,7 +5,7 @@ using VRTK;
 
 [RequireComponent(typeof(RandomAudioClip))]
 [RequireComponent(typeof(VRTK_InteractableObject))]
-public class SqueekyToy : MonoBehaviour {
+public class SqueakyToy : MonoBehaviour {
     private RandomAudioClip randomAudio;
     private VRTK_InteractableObject interactableObject;
 
