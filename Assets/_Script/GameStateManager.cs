@@ -6,13 +6,32 @@ public class GameStateManager : MonoBehaviour
 {
     private static GameStateManager _instance;
 
+    [Header("Boolean")]
+    public bool isBlackAndWhite = false;
+    public bool useFlag;
+
+    [Header("Color Change Speed")]
+    public float speed = 0.1F;
+    public float initSpeed = 0.2f;
+    public float initDuration = 3.0f;
+    public float satChaseRate = 0.85f;
+
+    [Header("Saturation Limits")]
+    public float initialSaturation = 0.4f;
+    public float minSaturation = 0.1f;
+    public float maxSaturation = 1.0f;
+
+    public float satValue;
+    public float satActual;
+
+
     public static GameStateManager Instance
     {
         get { return _instance; }
     }
 
-    public CamSaturationChange SaturationChange;
-    public CamSaturationChange SimSaturationChange;
+    //public CamSaturationChange SaturationChange;
+    //public CamSaturationChange SimSaturationChange;
     public Animator CarAnimator;
     public Horsie Horse;
     public RandomAudioClip AdultAudio;
@@ -26,14 +45,53 @@ public class GameStateManager : MonoBehaviour
         _instance = this;
         music = GetComponent<AudioSource>();
         randomMusic = GetComponent<RandomAudioClip>();
+        satValue = initialSaturation;
+        satActual = initialSaturation;
+
     }
 
     private void Update()
     {
-        music.volume = (SaturationChange.satActual - 0.3f) / 0.7f;
+        music.volume = (satActual - 0.3f) / 0.7f;
         if (!music.isPlaying)
         {
             randomMusic.Play();
+        }
+
+        // adjust saturation
+        //Debug.Log("Sat Update");
+        if (useFlag)
+        {
+            if (isBlackAndWhite == true)
+            {
+                if (satValue > 0F)
+                {
+                    satValue -= speed * Time.deltaTime;
+                }
+            }
+            else
+            {
+                if (satValue < 1F)
+                {
+                    satValue += speed * Time.deltaTime;
+                }
+            }
+        }
+        else
+        {
+            if (Time.timeSinceLevelLoad < initDuration)
+            {
+                // change to ensure initial value doesn't change 
+                //satValue -= initSpeed * Time.deltaTime;
+                satValue = initialSaturation;
+            }
+            else
+            {
+                satValue -= speed * Time.deltaTime;
+            }
+            if (satValue < minSaturation) satValue = minSaturation;
+            if (satValue > maxSaturation) satValue = maxSaturation;
+            satActual += (satValue - satActual) * satChaseRate * Time.deltaTime;
         }
     }
 
@@ -45,8 +103,7 @@ public class GameStateManager : MonoBehaviour
     private IEnumerator exitImagination()
     {
         Horse.Hide();
-        SaturationChange.isBlackAndWhite = true;
-        if (SimSaturationChange != null) SaturationChange.isBlackAndWhite = true;
+        isBlackAndWhite = true;
         CarAnimator.SetBool("TurnAround", true);
         AdultAudio.Play();
         yield return new WaitForSeconds(1.5f);
@@ -55,20 +112,22 @@ public class GameStateManager : MonoBehaviour
 
     public void StartImagination()
     {
-        SaturationChange.isBlackAndWhite = false;
-        if (SimSaturationChange != null) SimSaturationChange.isBlackAndWhite = false;
+        isBlackAndWhite = false;
         Horse.Show();
     }
 
     public void AdjustSaturation(float delta)
     {
-        if (SaturationChange != null) SaturationChange.AdjustSaturation(delta);
-        if (SimSaturationChange != null) SimSaturationChange.AdjustSaturation(delta);
+        //Debug.Log(string.Format("sat value pre {0}", satValue));
+        satValue = satValue + delta;
+        if (satValue < minSaturation) satValue = minSaturation;
+        if (satValue > maxSaturation) satValue = maxSaturation;
+        //Debug.Log(string.Format("sat adjust {0} to {1}", delta, satValue));
+        //Debug.Log(string.Format("sat value post {0}", satValue));
     }
 
     public void ForceSaturationSync()
     {
-        if (SaturationChange != null) SaturationChange.ForceSaturationSync();
-        if (SimSaturationChange != null) SimSaturationChange.ForceSaturationSync();
+        satActual = satValue;
     }
 }
