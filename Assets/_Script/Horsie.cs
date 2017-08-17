@@ -44,7 +44,7 @@ public class Horsie : MonoBehaviour {
 			RotationScale.y * Mathf.Sin (RotationSpeed.y * Time.time),
 			RotationScale.z * Mathf.Sin (RotationSpeed.z * Time.time)
 		);
-        if (CamSat.satActual > 0.7f)
+        if (GameStateManager.Instance.satActual > 0.7f)
         {
 			if (anim.GetBool ("Show") == false) {
 				appearSound.Play ();

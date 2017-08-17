@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 114175006024859716}
   - component: {fileID: 114759234760440606}
   - component: {fileID: 82283274621857452}
+  - component: {fileID: 114834114014911096}
   m_Layer: 0
   m_Name: lemon
   m_TagString: Untagged
@@ -217,25 +218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b100cb8a6cc20ad4390d5e0a39cfa84f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  disableWhenIdle: 1
-  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
-  allowedTouchControllers: 0
-  ignoredColliders: []
-  isGrabbable: 1
-  holdButtonToGrab: 1
-  stayGrabbedOnTeleport: 1
-  validDrop: 1
-  grabOverrideButton: 0
-  allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 0}
-  secondaryGrabActionScript: {fileID: 0}
-  isUsable: 0
-  holdButtonToUse: 1
-  useOnlyIfGrabbed: 0
-  pointerActivatesUseAction: 0
-  useOverrideButton: 0
-  allowedUseControllers: 0
-  usingState: 0
 --- !u!114 &114706364543022866
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -270,6 +252,36 @@ MonoBehaviour:
   - {fileID: 8300000, guid: aec6606aa27fbea4bbe0e847d3706ed4, type: 3}
   - {fileID: 8300000, guid: 4806278e11e52f241801a92e91abd1f5, type: 3}
   - {fileID: 8300000, guid: 949e05e42f66a48409515034f12f46dc, type: 3}
+--- !u!114 &114834114014911096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1591078108904458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3abaf4521bf2344ea21ed3020b98eb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableWhenIdle: 1
+  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  allowedTouchControllers: 0
+  ignoredColliders: []
+  isGrabbable: 1
+  holdButtonToGrab: 1
+  stayGrabbedOnTeleport: 1
+  validDrop: 1
+  grabOverrideButton: 0
+  allowedGrabControllers: 0
+  grabAttachMechanicScript: {fileID: 0}
+  secondaryGrabActionScript: {fileID: 0}
+  isUsable: 0
+  holdButtonToUse: 1
+  useOnlyIfGrabbed: 0
+  pointerActivatesUseAction: 0
+  useOverrideButton: 0
+  allowedUseControllers: 0
+  usingState: 0
 --- !u!114 &114933725068698182
 MonoBehaviour:
   m_ObjectHideFlags: 1
