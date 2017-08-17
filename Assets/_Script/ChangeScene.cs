@@ -8,6 +8,7 @@ using VRTK;
 public class ChangeScene : MonoBehaviour {
 
 	public GameObject VRcamera;
+    public GameObject SimCamera;
     VRTK_InteractableObject io;
 
 	// Use this for initialization
@@ -24,8 +25,14 @@ public class ChangeScene : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		
-	}
+
+        if (Input.GetKeyDown("space"))
+        {
+            Debug.Log("coroutine start");
+            StartCoroutine("Wait");
+        }
+
+    }
 
 	void OnTriggerEnter(Collider other){
 		
@@ -38,7 +45,8 @@ public class ChangeScene : MonoBehaviour {
 		yield return new WaitForSeconds(3);
 
 		// Start Fading
-		VRcamera.GetComponent<OVRScreenFade>().StartFadeOut();
+		if (VRcamera!=null && VRcamera.activeInHierarchy) VRcamera.GetComponent<OVRScreenFade>().StartFadeOut();
+        if (SimCamera != null && SimCamera.activeInHierarchy) SimCamera.GetComponent<OVRScreenFade>().StartFadeOut();
 
 		// Wait 2 sec
 		yield return new WaitForSeconds(1.98F);

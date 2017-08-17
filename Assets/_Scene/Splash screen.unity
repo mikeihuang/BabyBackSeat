@@ -1407,7 +1407,7 @@ Prefab:
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 273
+      value: 622
       objectReference: {fileID: 0}
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
@@ -2500,17 +2500,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37406285bd19ae8418259c3fac91b30d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isBlackAndWhite: 1
-  useFlag: 0
-  speed: 0.01
-  initSpeed: 0.2
-  initDuration: 3
-  satChaseRate: 0.85
-  initialSaturation: 0.6
-  minSaturation: 0.1
-  maxSaturation: 1
-  satValue: 1
-  satActual: 1
 --- !u!114 &434210611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3196,11 +3185,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b100cb8a6cc20ad4390d5e0a39cfa84f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &573327679
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 573327674}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0044227, y: 1.7576146, z: 3.3660302}
+  m_Center: {x: 0.02140522, y: 0.6946254, z: 0.063479185}
+--- !u!114 &573327680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 573327674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3abaf4521bf2344ea21ed3020b98eb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   disableWhenIdle: 1
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   allowedTouchControllers: 0
   ignoredColliders: []
-  isGrabbable: 1
+  isGrabbable: 0
   holdButtonToGrab: 1
   stayGrabbedOnTeleport: 1
   validDrop: 1
@@ -3215,18 +3227,6 @@ MonoBehaviour:
   useOverrideButton: 0
   allowedUseControllers: 0
   usingState: 0
---- !u!65 &573327679
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 573327674}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.0044227, y: 1.7576146, z: 3.3660302}
-  m_Center: {x: 0.02140522, y: 0.6946254, z: 0.063479185}
 --- !u!4 &573327681 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400004, guid: 3eed8165b861f444cbb8fe297fefedd7, type: 3}
@@ -3273,6 +3273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VRcamera: {fileID: 434210608}
+  SimCamera: {fileID: 811810424}
 --- !u!1 &610884781
 GameObject:
   m_ObjectHideFlags: 0
@@ -7599,6 +7600,7 @@ GameObject:
   - component: {fileID: 811810429}
   - component: {fileID: 811810428}
   - component: {fileID: 811810427}
+  - component: {fileID: 811810432}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -7630,7 +7632,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.8509804, g: 0.69411767, b: 0.8745098, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -7663,29 +7665,18 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 811810424}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37406285bd19ae8418259c3fac91b30d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isBlackAndWhite: 0
-  useFlag: 0
-  speed: 0.1
-  initSpeed: 0.2
-  initDuration: 3
-  satChaseRate: 0.85
-  initialSaturation: 0.6
-  minSaturation: 0.1
-  maxSaturation: 1
-  satValue: 1
-  satActual: 1
 --- !u!114 &811810428
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 811810424}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
@@ -7706,7 +7697,7 @@ Behaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 811810424}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &811810431
 Behaviour:
   m_ObjectHideFlags: 0
@@ -7714,7 +7705,20 @@ Behaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 811810424}
+  m_Enabled: 0
+--- !u!114 &811810432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 811810424}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df8e1d778abf442e4bec449c360e9e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeTime: 2
+  fadeColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &845945864
 GameObject:
   m_ObjectHideFlags: 0

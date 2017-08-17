@@ -59,6 +59,11 @@ public class GameStateManager : MonoBehaviour
         }
 
         // adjust saturation
+
+        if (Input.GetKeyDown("m")) satValue = minSaturation;
+        if (Input.GetKeyDown("k")) satValue -= 0.2f;
+        if (Input.GetKeyDown("l")) satValue += 0.2f;
+
         //Debug.Log("Sat Update");
         if (useFlag)
         {

@@ -67,7 +67,7 @@ public class OVRScreenFade : MonoBehaviour
 	void OnLevelWasLoaded(int level)
 #endif
 	{
-		StartCoroutine(FadeIn());
+        if (this.gameObject.activeInHierarchy) StartCoroutine(FadeIn());
 	}
 
 	/// <summary>
@@ -109,11 +109,11 @@ public class OVRScreenFade : MonoBehaviour
 	// NEW: Fade Out Code for public use
 
 	public void StartFadeIn(){
-		StartCoroutine(FadeIn());
+        if (this.gameObject.activeInHierarchy) StartCoroutine(FadeIn());
 	}
 
 	public void StartFadeOut(){
-		StartCoroutine (FadeOut ());
+        if (this.gameObject.activeInHierarchy) StartCoroutine (FadeOut ());
 	}
 
 	IEnumerator FadeOut()
