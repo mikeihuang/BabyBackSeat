@@ -13,6 +13,7 @@ public class SqueakyToy : MonoBehaviour {
     {
         randomAudio = GetComponent<RandomAudioClip>();
         interactableObject = GetComponent<VRTK_InteractableObject>();
+        if (interactableObject == null) Debug.Log("Skeaky without VRTK_IO in " + this.gameObject.name);
         interactableObject.InteractableObjectGrabbed += InteractableObject_InteractableObjectGrabbed;
     }
 

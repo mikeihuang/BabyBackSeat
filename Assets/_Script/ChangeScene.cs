@@ -28,7 +28,7 @@ public class ChangeScene : MonoBehaviour {
 
         if (Input.GetKeyDown("space"))
         {
-            Debug.Log("coroutine start");
+            //Debug.Log("coroutine start");
             StartCoroutine("Wait");
         }
 
