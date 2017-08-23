@@ -20,6 +20,7 @@ public class ChangeScene : MonoBehaviour {
     private void Io_InteractableObjectGrabbed(object sender, InteractableObjectEventArgs e)
     {
         //throw new System.NotImplementedException();
+		//Debug.Log("grabbed");
         StartCoroutine("Wait");
     }
 
@@ -42,8 +43,9 @@ public class ChangeScene : MonoBehaviour {
 
 	IEnumerator Wait()
 	{
+		//Debug.Log("coroutine started");
 		yield return new WaitForSeconds(3);
-
+		//Debug.Log("coroutine started 2");
 		// Start Fading
 		if (VRcamera!=null && VRcamera.activeInHierarchy) VRcamera.GetComponent<OVRScreenFade>().StartFadeOut();
         if (SimCamera != null && SimCamera.activeInHierarchy) SimCamera.GetComponent<OVRScreenFade>().StartFadeOut();
