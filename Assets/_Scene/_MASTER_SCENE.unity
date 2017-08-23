@@ -12235,7 +12235,7 @@ Prefab:
     - target: {fileID: 114491757237681032, guid: a9b66704e9e074044aa56e6d3a0c3785,
         type: 2}
       propertyPath: initDuration
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114491757237681032, guid: a9b66704e9e074044aa56e6d3a0c3785,
         type: 2}
