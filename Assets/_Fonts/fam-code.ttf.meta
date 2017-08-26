@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 4ab95baac8ca2ec47abef7998a0b5910
+timeCreated: 1503715696
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: FAM-Code
+  fontNames:
+  - FAM-Code
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

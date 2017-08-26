@@ -5,6 +5,13 @@ using UnityEngine;
 public class GameStateManager : MonoBehaviour
 {
     private static GameStateManager _instance;
+    public static GameStateManager Instance
+    {
+        get { return _instance; }
+    }
+
+    public float GameLength = 180;
+    public float GameTime;
 
     [Header("Boolean")]
     public bool isBlackAndWhite = false;
@@ -24,12 +31,6 @@ public class GameStateManager : MonoBehaviour
     public float satValue;
     public float satActual;
 
-
-    public static GameStateManager Instance
-    {
-        get { return _instance; }
-    }
-
     //public CamSaturationChange SaturationChange;
     //public CamSaturationChange SimSaturationChange;
     public Animator CarAnimator;
@@ -45,6 +46,7 @@ public class GameStateManager : MonoBehaviour
         _instance = this;
         music = GetComponent<AudioSource>();
         randomMusic = GetComponent<RandomAudioClip>();
+        GameTime = GameLength;
         satValue = initialSaturation;
         satActual = initialSaturation;
 
@@ -98,6 +100,12 @@ public class GameStateManager : MonoBehaviour
             if (satValue > maxSaturation) satValue = maxSaturation;
             satActual += (satValue - satActual) * satChaseRate * Time.deltaTime;
         }
+
+        GameTime -= Time.deltaTime * satValue;
+        if (GameTime < 0)
+        {
+            EndGame();
+        }
     }
 
     public void ExitImagination()
@@ -134,5 +142,10 @@ public class GameStateManager : MonoBehaviour
     public void ForceSaturationSync()
     {
         satActual = satValue;
+    }
+
+    public void EndGame()
+    {
+
     }
 }
