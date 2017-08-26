@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1319524810909674}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.819385, y: 0.8182037, z: -1.0233877}
+  m_LocalPosition: {x: -3.173, y: 0.8182037, z: -0.614}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -133,8 +133,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 134d835a733cd714eb4f8afe3f2ec5d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SaturationChange: {fileID: 0}
-  SimSaturationChange: {fileID: 0}
+  GameLength: 180
+  GameTime: 0
+  isBlackAndWhite: 0
+  useFlag: 0
+  speed: 0.1
+  initSpeed: 0.2
+  initDuration: 5
+  satChaseRate: 0.85
+  initialSaturation: 0.1
+  minSaturation: 0.1
+  maxSaturation: 1
+  satValue: 0.1
+  satActual: 0.1
   CarAnimator: {fileID: 0}
   Horse: {fileID: 0}
   AdultAudio: {fileID: 0}

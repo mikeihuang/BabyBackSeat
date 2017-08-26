@@ -302,8 +302,11 @@ MonoBehaviour:
   - {fileID: 1000011086151546, guid: f268d41a635271b499c19e7154a03321, type: 2}
   - {fileID: 1000011868398520, guid: fb28c56cbe98b9944b86dc4658a34987, type: 2}
   TerrainPool:
-  - {fileID: 1376945674464650}
-  - {fileID: 1699092105057436}
+  - {fileID: 4965446635842902}
+  - {fileID: 4275139159974226}
+  GoalSpawnTimeRemaining: 50
+  GoalSpawnPosition: {x: 0, y: 0, z: 500}
+  GoalPrefab: {fileID: 4001938837674096, guid: 549fb44361c81d24590c16c630ee4684, type: 2}
 --- !u!154 &154461948619851052
 TerrainCollider:
   m_ObjectHideFlags: 1
