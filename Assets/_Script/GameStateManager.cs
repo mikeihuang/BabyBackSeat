@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameStateManager : MonoBehaviour
 {
@@ -39,6 +40,7 @@ public class GameStateManager : MonoBehaviour
 
     private AudioSource music;
     private RandomAudioClip randomMusic;
+    private bool endingGame = false;
     
 
     private void Start()
@@ -102,7 +104,7 @@ public class GameStateManager : MonoBehaviour
         }
 
         GameTime -= Time.deltaTime * satValue;
-        if (GameTime < 0)
+        if (GameTime < 0 && !endingGame)
         {
             EndGame();
         }
@@ -146,6 +148,19 @@ public class GameStateManager : MonoBehaviour
 
     public void EndGame()
     {
+        endingGame = true;
+        StartCoroutine(endGame());
+    }
 
+    private IEnumerator endGame()
+    {
+        OVRScreenFade fade = GameObject.FindObjectOfType<OVRScreenFade>();
+        if (fade != null) fade.GetComponent<OVRScreenFade>().StartFadeOut();
+
+        // Wait 2 sec
+        yield return new WaitForSeconds(1.98F);
+
+        // Go to new scene
+        SceneManager.LoadScene("Splash screen");
     }
 }
