@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Exploder : MonoBehaviour {
 
-	public ParticleSystem ExplosionParticleSystem;
+	public List<ParticleSystem> ExplosionParticleSystems;
 	public List<MeshRenderer> myRenderers;
 
 	public RandomAudioClip randomAudioClip;
@@ -13,7 +13,7 @@ public class Exploder : MonoBehaviour {
 	void Start () {
 		myRenderers.AddRange(GetComponentsInChildren<MeshRenderer> ());
 		myRenderers.Add (GetComponent<MeshRenderer> ());
-		ExplosionParticleSystem = GetComponentInChildren<ParticleSystem> ();
+		ExplosionParticleSystems.AddRange(GetComponentsInChildren<ParticleSystem> ());
 		randomAudioClip = GetComponent<RandomAudioClip> ();
 	}
 
@@ -25,16 +25,15 @@ public class Exploder : MonoBehaviour {
 			}
 		}
 
-		if (ExplosionParticleSystem) {
-			if (ExplosionParticleSystem.isPlaying) {
-				ExplosionParticleSystem.Stop ();
-			}
+		foreach (ParticleSystem p in ExplosionParticleSystems) {
+			if (p.isPlaying)
+				p.Stop ();
 		}
 	}
 
 	void OnCollisionEnter(Collision collision)
 	{
-		Debug.Log (this.name + " collided with " + collision.gameObject.name);
+		//Debug.Log (this.name + " collided with " + collision.gameObject.name);
 
 		foreach (MeshRenderer r in myRenderers) {
 			if (r) {
@@ -42,8 +41,9 @@ public class Exploder : MonoBehaviour {
 			}
 		}
 
-		if (ExplosionParticleSystem) {
-			ExplosionParticleSystem.Play ();
+		foreach (ParticleSystem p in ExplosionParticleSystems) {
+			if (!p.isPlaying)
+				p.Play();
 		}
 
 		if (randomAudioClip) {
@@ -51,6 +51,6 @@ public class Exploder : MonoBehaviour {
 		}
 
         // big win
-        GameStateManager.Instance.AdjustSaturation(+0.2f);
+        GameStateManager.Instance.AdjustSaturation(+0.1f);	// Was: 0.2f
 	}
 }
