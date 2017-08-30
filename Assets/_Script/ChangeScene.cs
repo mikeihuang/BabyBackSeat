@@ -10,9 +10,11 @@ public class ChangeScene : MonoBehaviour {
 	public GameObject VRcamera;
     public GameObject SimCamera;
     VRTK_InteractableObject io;
+    public float fadeDelay = 3.0f;
+    public float fadeDuration = 1.98f;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         io = GetComponent<VRTK_InteractableObject>();
         io.InteractableObjectGrabbed += Io_InteractableObjectGrabbed;
 	}
@@ -44,14 +46,14 @@ public class ChangeScene : MonoBehaviour {
 	IEnumerator Wait()
 	{
 		//Debug.Log("coroutine started");
-		yield return new WaitForSeconds(3);
+		yield return new WaitForSeconds(fadeDelay);
 		//Debug.Log("coroutine started 2");
 		// Start Fading
 		if (VRcamera!=null && VRcamera.activeInHierarchy) VRcamera.GetComponent<OVRScreenFade>().StartFadeOut();
         if (SimCamera != null && SimCamera.activeInHierarchy) SimCamera.GetComponent<OVRScreenFade>().StartFadeOut();
 
 		// Wait 2 sec
-		yield return new WaitForSeconds(1.98F);
+		yield return new WaitForSeconds(fadeDuration);
 
 		// Go to new scene
 		SceneManager.LoadScene("_MASTER_SCENE");

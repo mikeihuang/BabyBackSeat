@@ -1407,7 +1407,7 @@ Prefab:
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 351
+      value: 718
       objectReference: {fileID: 0}
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
@@ -3173,7 +3173,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
-  audioClips: []
+  audioClips:
+  - {fileID: 8300000, guid: 3bd5d1e601269214c9f77cb58aca177f, type: 3}
+  - {fileID: 8300000, guid: 14923a1ef9bd7044ea5948758e289ed9, type: 3}
+  - {fileID: 8300000, guid: 7b58853781467e64eb166a41cadb0cd9, type: 3}
+  - {fileID: 8300000, guid: b40fd3fdb3f9b3b4a9ccb2b3d7accb8b, type: 3}
+  - {fileID: 8300000, guid: cea9c06ddad5263438f2c5402e0422e3, type: 3}
+  - {fileID: 8300000, guid: f32e6afa33ac4ac49be750ec68739632, type: 3}
+  - {fileID: 8300000, guid: 652ae66ab6dc85344b3a48abf488144a, type: 3}
+  - {fileID: 8300000, guid: aec6606aa27fbea4bbe0e847d3706ed4, type: 3}
+  - {fileID: 8300000, guid: 4806278e11e52f241801a92e91abd1f5, type: 3}
+  - {fileID: 8300000, guid: 949e05e42f66a48409515034f12f46dc, type: 3}
 --- !u!114 &573327678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3274,6 +3284,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VRcamera: {fileID: 434210608}
   SimCamera: {fileID: 811810424}
+  fadeDelay: 0.75
+  fadeDuration: 1.5
 --- !u!1 &610884781
 GameObject:
   m_ObjectHideFlags: 0
