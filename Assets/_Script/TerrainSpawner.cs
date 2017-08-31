@@ -19,7 +19,7 @@ public class TerrainSpawner : MonoBehaviour
     public List<Transform> TerrainPool = new List<Transform>();
 
     public float GoalSpawnTimeRemaining = 50;
-    public Vector3 GoalSpawnPosition;
+    public Vector3 GoalSpawnOffset;
 
     public Transform GoalPrefab;
 
@@ -40,7 +40,7 @@ public class TerrainSpawner : MonoBehaviour
     void UpdateTerrain()
     {
 		// Update the current speed based on the saturation value in the gamestate manager
-		speedVector = Vector3.back * (minSpeed + maxSpeed * GameStateManager.Instance.satActual);
+		speedVector = Vector3.back * Mathf.Lerp(minSpeed, maxSpeed, GameStateManager.Instance.satActual);
 
 		// Loop through all the objects in the terrain pool and move them slightly backwards to simulate the car moving
         foreach (Transform t in TerrainPool)
@@ -64,7 +64,7 @@ public class TerrainSpawner : MonoBehaviour
 		if (GameStateManager.Instance.GameTime <= GoalSpawnTimeRemaining && !spawnedGoal)
 		{
 			Transform goal = Instantiate<Transform>(GoalPrefab);
-			goal.position = GoalSpawnPosition;
+            goal.position = GoalSpawnOffset + new Vector3(0, 0, GoalSpawnTimeRemaining * maxSpeed);
 			TerrainPool.Add(goal);
 			spawnedGoal = true;
 		}
