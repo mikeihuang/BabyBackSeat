@@ -10,7 +10,10 @@ public class Horsie : MonoBehaviour {
 	public Vector3 RotationScale = new Vector3 ();
 	public Vector3 RotationSpeed = new Vector3 ();
 
+    public float RespawnDelay = 5f;
+
     public CamSaturationChange CamSat;
+    public RandomAudioClip appearSound;
 
     private AudioSource eatingSound;
     private Animator anim;
@@ -18,7 +21,7 @@ public class Horsie : MonoBehaviour {
 	private Vector3 RootPosition;
 	private Quaternion RootRotation;
 
-	public RandomAudioClip appearSound;
+    private float timeOut;
 
 	// Use this for initialization
 	void Start () {
@@ -44,7 +47,8 @@ public class Horsie : MonoBehaviour {
 			RotationScale.y * Mathf.Sin (RotationSpeed.y * Time.time),
 			RotationScale.z * Mathf.Sin (RotationSpeed.z * Time.time)
 		);
-        if (GameStateManager.Instance.satActual > 0.7f)
+        timeOut -= Time.deltaTime;
+        if (GameStateManager.Instance.satActual > 0.7f && timeOut < 0)
         {
 			if (anim.GetBool ("Show") == false) {
 				appearSound.Play ();
@@ -97,6 +101,14 @@ public class Horsie : MonoBehaviour {
         if (collision.gameObject.tag == "Food")
         {
             StartCoroutine(Eat(collision.gameObject));
+        }
+        else
+        {
+            if (collision.gameObject.tag == "Weapon")
+            {
+                timeOut = RespawnDelay;
+                appearSound.Play();
+            }
         }
     }
 

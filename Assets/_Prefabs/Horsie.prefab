@@ -291,8 +291,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.48, y: 0.43649834, z: 0.480336}
-  m_Center: {x: 0.000008410243, y: 0.50542, z: 0.702873}
+  m_Size: {x: 0.48, y: 0.5971729, z: 1.1245152}
+  m_Center: {x: 0.000010205696, y: 0.5857603, z: 0.38078266}
 --- !u!82 &82026137400763798
 AudioSource:
   m_ObjectHideFlags: 1
@@ -485,6 +485,7 @@ MonoBehaviour:
   MovementSpeed: {x: 1, y: 4, z: 0}
   RotationScale: {x: 0, y: 0, z: 0}
   RotationSpeed: {x: 0, y: 0, z: 0}
+  RespawnDelay: 5
   CamSat: {fileID: 0}
   appearSound: {fileID: 114884837463800148}
 --- !u!114 &114884837463800148
