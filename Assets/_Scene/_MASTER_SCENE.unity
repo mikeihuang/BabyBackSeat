@@ -554,6 +554,11 @@ Prefab:
       propertyPath: touchHighlightColor.a
       value: 0.73333335
       objectReference: {fileID: 0}
+    - target: {fileID: 114602362671157060, guid: 5b63de927760304438a3c6ac347846d5,
+        type: 2}
+      propertyPath: disableWhenIdle
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5b63de927760304438a3c6ac347846d5, type: 2}
   m_IsPrefabParent: 0
@@ -843,6 +848,11 @@ Prefab:
         type: 2}
       propertyPath: touchHighlightColor.a
       value: 0.73333335
+      objectReference: {fileID: 0}
+    - target: {fileID: 114096465753262138, guid: bbee6ca950600410aa2375a21a581fb9,
+        type: 2}
+      propertyPath: disableWhenIdle
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65488184611561868, guid: bbee6ca950600410aa2375a21a581fb9, type: 2}
@@ -2063,6 +2073,11 @@ Prefab:
         type: 2}
       propertyPath: touchHighlightColor.a
       value: 0.73333335
+      objectReference: {fileID: 0}
+    - target: {fileID: 114680778249353806, guid: 3bcf90125c6df413ead9815ffa015a95,
+        type: 2}
+      propertyPath: disableWhenIdle
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65412855620268666, guid: 3bcf90125c6df413ead9815ffa015a95, type: 2}
@@ -6596,6 +6611,11 @@ Prefab:
       propertyPath: touchHighlightColor.a
       value: 0.73333335
       objectReference: {fileID: 0}
+    - target: {fileID: 114243830173309626, guid: 8ea29250fb9634414a5b431ed9536de8,
+        type: 2}
+      propertyPath: disableWhenIdle
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65127939067054984, guid: 8ea29250fb9634414a5b431ed9536de8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8ea29250fb9634414a5b431ed9536de8, type: 2}
@@ -7226,7 +7246,7 @@ Prefab:
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -70
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
@@ -7236,7 +7256,7 @@ Prefab:
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 120
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3, type: 2}
@@ -7323,6 +7343,11 @@ Prefab:
         type: 2}
       propertyPath: touchHighlightColor.a
       value: 0.73333335
+      objectReference: {fileID: 0}
+    - target: {fileID: 114541809322601114, guid: 06f9b3fb4ca6b4b9d9e844a02c6b76af,
+        type: 2}
+      propertyPath: disableWhenIdle
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 06f9b3fb4ca6b4b9d9e844a02c6b76af, type: 2}
@@ -8155,6 +8180,11 @@ Prefab:
       propertyPath: touchHighlightColor.a
       value: 0.73333335
       objectReference: {fileID: 0}
+    - target: {fileID: 114896765853252688, guid: cdfada5e6572e4deebceefbafecc1f03,
+        type: 2}
+      propertyPath: disableWhenIdle
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdfada5e6572e4deebceefbafecc1f03, type: 2}
   m_IsPrefabParent: 0
@@ -8402,6 +8432,11 @@ Prefab:
         type: 2}
       propertyPath: touchHighlightColor.a
       value: 0.73333335
+      objectReference: {fileID: 0}
+    - target: {fileID: 114276416811315816, guid: 7460e61cdf42c45eab84f2425c211939,
+        type: 2}
+      propertyPath: disableWhenIdle
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7460e61cdf42c45eab84f2425c211939, type: 2}
@@ -8817,6 +8852,11 @@ Prefab:
       propertyPath: touchHighlightColor.a
       value: 0.73333335
       objectReference: {fileID: 0}
+    - target: {fileID: 114384155201881222, guid: bdbe47bb6357a4b96a17e2a1fc7e025a,
+        type: 2}
+      propertyPath: disableWhenIdle
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65735111471321058, guid: bdbe47bb6357a4b96a17e2a1fc7e025a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: bdbe47bb6357a4b96a17e2a1fc7e025a, type: 2}
@@ -8952,6 +8992,11 @@ Prefab:
         type: 2}
       propertyPath: touchHighlightColor.a
       value: 0.73333335
+      objectReference: {fileID: 0}
+    - target: {fileID: 114071023266409482, guid: b5aef51a801da4e5c8c827c44af292d2,
+        type: 2}
+      propertyPath: disableWhenIdle
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65262706124436234, guid: b5aef51a801da4e5c8c827c44af292d2, type: 2}
@@ -9465,6 +9510,11 @@ Prefab:
       propertyPath: touchHighlightColor.a
       value: 0.73333335
       objectReference: {fileID: 0}
+    - target: {fileID: 114947944090061860, guid: 108b1dfb3718d604e9452dfa37a30cdc,
+        type: 2}
+      propertyPath: disableWhenIdle
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 108b1dfb3718d604e9452dfa37a30cdc, type: 2}
   m_IsPrefabParent: 0
@@ -9628,6 +9678,11 @@ Prefab:
         type: 2}
       propertyPath: touchHighlightColor.a
       value: 0.73333335
+      objectReference: {fileID: 0}
+    - target: {fileID: 114193571331617220, guid: 5ca9a90bdc3ff4de3ab3d4d96e862e9b,
+        type: 2}
+      propertyPath: disableWhenIdle
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65242163406742034, guid: 5ca9a90bdc3ff4de3ab3d4d96e862e9b, type: 2}
@@ -10091,6 +10146,11 @@ Prefab:
         type: 2}
       propertyPath: touchHighlightColor.a
       value: 0.73333335
+      objectReference: {fileID: 0}
+    - target: {fileID: 114244312502582988, guid: 24ca9727ce1124bb4803bc09f4ab4942,
+        type: 2}
+      propertyPath: disableWhenIdle
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65638276257085406, guid: 24ca9727ce1124bb4803bc09f4ab4942, type: 2}
@@ -10893,6 +10953,11 @@ Prefab:
       propertyPath: touchHighlightColor.a
       value: 0.73333335
       objectReference: {fileID: 0}
+    - target: {fileID: 114157806796060770, guid: fcc89892f14a9475f9c22f4ea130a1a4,
+        type: 2}
+      propertyPath: disableWhenIdle
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fcc89892f14a9475f9c22f4ea130a1a4, type: 2}
   m_IsPrefabParent: 0
@@ -11280,6 +11345,11 @@ Prefab:
         type: 2}
       propertyPath: touchHighlightColor.a
       value: 0.73333335
+      objectReference: {fileID: 0}
+    - target: {fileID: 114548623445982678, guid: e51fe706056928b4586f68a8eeaabac5,
+        type: 2}
+      propertyPath: disableWhenIdle
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e51fe706056928b4586f68a8eeaabac5, type: 2}
@@ -11788,6 +11858,11 @@ Prefab:
         type: 2}
       propertyPath: touchHighlightColor.a
       value: 0.73333335
+      objectReference: {fileID: 0}
+    - target: {fileID: 114834114014911096, guid: 1dc77e539eb4946c69e392cc1e65314f,
+        type: 2}
+      propertyPath: disableWhenIdle
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65188277205834246, guid: 1dc77e539eb4946c69e392cc1e65314f, type: 2}
@@ -12636,6 +12711,11 @@ Prefab:
       propertyPath: touchHighlightColor.a
       value: 0.73333335
       objectReference: {fileID: 0}
+    - target: {fileID: 114303642462048092, guid: 1168e432e0c205345b90c4ec2f307c97,
+        type: 2}
+      propertyPath: disableWhenIdle
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1168e432e0c205345b90c4ec2f307c97, type: 2}
   m_IsPrefabParent: 0
@@ -13266,6 +13346,11 @@ Prefab:
       propertyPath: touchHighlightColor.a
       value: 0.73333335
       objectReference: {fileID: 0}
+    - target: {fileID: 114976848331249242, guid: 4232e1b034f1c49e2a435c4825091b46,
+        type: 2}
+      propertyPath: disableWhenIdle
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65423193386899522, guid: 4232e1b034f1c49e2a435c4825091b46, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 4232e1b034f1c49e2a435c4825091b46, type: 2}
@@ -13441,6 +13526,11 @@ Prefab:
       propertyPath: touchHighlightColor.a
       value: 0.73333335
       objectReference: {fileID: 0}
+    - target: {fileID: 114722361484226792, guid: 7bcabae063e8248c6a7567f1e1cd0128,
+        type: 2}
+      propertyPath: disableWhenIdle
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65894224328573244, guid: 7bcabae063e8248c6a7567f1e1cd0128, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 7bcabae063e8248c6a7567f1e1cd0128, type: 2}
@@ -13590,6 +13680,26 @@ Prefab:
     - target: {fileID: 1508763911726152, guid: 9a29baf5c85cc7c4ab9b7b1f21c087c1, type: 2}
       propertyPath: m_TagString
       value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 114678030467617920, guid: 9a29baf5c85cc7c4ab9b7b1f21c087c1,
+        type: 2}
+      propertyPath: disableWhenIdle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114678030467617920, guid: 9a29baf5c85cc7c4ab9b7b1f21c087c1,
+        type: 2}
+      propertyPath: touchHighlightColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114678030467617920, guid: 9a29baf5c85cc7c4ab9b7b1f21c087c1,
+        type: 2}
+      propertyPath: touchHighlightColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114678030467617920, guid: 9a29baf5c85cc7c4ab9b7b1f21c087c1,
+        type: 2}
+      propertyPath: touchHighlightColor.b
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a29baf5c85cc7c4ab9b7b1f21c087c1, type: 2}
@@ -13922,6 +14032,11 @@ Prefab:
         type: 2}
       propertyPath: touchHighlightColor.a
       value: 0.73333335
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567587832161678, guid: 7352a6336367e4b9fb4787d13dccbe6b,
+        type: 2}
+      propertyPath: disableWhenIdle
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65165025716961976, guid: 7352a6336367e4b9fb4787d13dccbe6b, type: 2}
@@ -14779,6 +14894,11 @@ Prefab:
         type: 2}
       propertyPath: touchHighlightColor.a
       value: 0.73333335
+      objectReference: {fileID: 0}
+    - target: {fileID: 114617860187877366, guid: 77a42c3bba50847329fc3623f0bb95a7,
+        type: 2}
+      propertyPath: disableWhenIdle
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77a42c3bba50847329fc3623f0bb95a7, type: 2}
