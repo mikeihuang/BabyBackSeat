@@ -11,8 +11,7 @@ public class Horsie : MonoBehaviour {
 	public Vector3 RotationSpeed = new Vector3 ();
 
     public float RespawnDelay = 5f;
-
-    public CamSaturationChange CamSat;
+    
     public RandomAudioClip appearSound;
 
     private AudioSource eatingSound;
