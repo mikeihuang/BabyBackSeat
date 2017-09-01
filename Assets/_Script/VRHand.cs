@@ -2,12 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VRHandR : MonoBehaviour {
+public class VRHand : MonoBehaviour {
 
-	void Update () {
+    VRTK.VRTK_ControllerEvents controllerEvents;
+
+    private void Start()
+    {
+        controllerEvents = GetComponent<Transform>().parent.GetComponentInChildren<VRTK.VRTK_ControllerEvents>();
+    }
+
+    void Update () {
 
 		// Change Hand material while pressing trigger
-		if(OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) > 0f){
+		if(controllerEvents.triggerHairlinePressed){
 			GetComponent<Animator> ().SetBool ("Close", true);
 		} else {
 			GetComponent<Animator> ().SetBool ("Close", false);
@@ -20,7 +27,7 @@ public class VRHandR : MonoBehaviour {
 
 		// Play sound if IndexTrigger is pressed
 		if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger)){
-			//
+			
 		}
 	}
 }
