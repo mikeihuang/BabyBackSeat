@@ -6,9 +6,6 @@ using VRTK;
 
 
 public class ChangeScene : MonoBehaviour {
-
-	public GameObject VRcamera;
-    public GameObject SimCamera;
     VRTK_InteractableObject io;
     public float fadeDelay = 3.0f;
     public float fadeDuration = 1.98f;
@@ -47,10 +44,10 @@ public class ChangeScene : MonoBehaviour {
 	{
 		//Debug.Log("coroutine started");
 		yield return new WaitForSeconds(fadeDelay);
-		//Debug.Log("coroutine started 2");
-		// Start Fading
-		if (VRcamera!=null && VRcamera.activeInHierarchy) VRcamera.GetComponent<OVRScreenFade>().StartFadeOut();
-        if (SimCamera != null && SimCamera.activeInHierarchy) SimCamera.GetComponent<OVRScreenFade>().StartFadeOut();
+        //Debug.Log("coroutine started 2");
+        // Start Fading
+        OVRScreenFade fade = FindObjectOfType<OVRScreenFade>();
+        fade.GetComponent<OVRScreenFade>().StartFadeOut();
 
 		// Wait 2 sec
 		yield return new WaitForSeconds(fadeDuration);
